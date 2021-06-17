@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './jsx/App';
+import 'typeface-open-sans';
 
 ReactDOM.render(
   <React.StrictMode>

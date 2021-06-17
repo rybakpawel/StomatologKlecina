@@ -1,0 +1,15 @@
+.button--transparent {
+    @include button;
+}
+
+.button--full {
+    @include button($base-color, $color:#fff);
+}
+
+.button--border-white {
+    @include button($border: 1px solid, $color: #fff);
+}
+
+.button--border-color {
+    @include button($border: 1px solid, $color: $base-color);
+}

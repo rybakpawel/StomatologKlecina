@@ -1,0 +1,14 @@
+@mixin button($bgc: transparent, $border: none, $color: $darker-font, $text-transform: uppercase) {
+    background-color: $bgc;
+    border: $border;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    color: $color;
+    padding: 1rem 2.8rem;
+    font-size: 1.2rem;
+    text-transform: $text-transform;
+
+    @if $border !=0 {
+        border-color: $color;
+    }
+}
