@@ -1,6 +1,10 @@
 ##### Created by Paweł Rybak.
 ##### URL: http://www.stomatologklecina.pl
 
-## Technologies
+## Technologies & Methodologies
+###### React.js
+###### React Router
+###### SCSS
+###### BEM
 
 
