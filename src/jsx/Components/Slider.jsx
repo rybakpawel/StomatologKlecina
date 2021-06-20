@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from 'swiper/core';
-
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
-
 import Button from './Button'
 import dentistTransparent from '../../assets/images/dentist_transparent.png'
 import chair from '../../assets/images/chair.jpg'
