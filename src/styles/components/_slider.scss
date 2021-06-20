@@ -1,0 +1,27 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    background-color: $base-color;
+    color: #fff;
+    padding: 3rem 3rem 0 3rem;
+    text-align: center;
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__description {
+        margin: 2.6rem 0;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    &__image {
+        margin-top: 3rem;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important;
+}

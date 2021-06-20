@@ -8,7 +8,7 @@ const InfoShortcuts = () => {
     return (
         <section className='info-shortcuts'>
             <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={pin} alt='dentist'></img>
+                <img className='info-shortcuts__icon-informations__icon' src={pin} alt='pin'></img>
                 <div className='info-shortcuts__icon-informations__informations'>
                     <h4>Adres</h4>
                     <p>ul. Kostrzyńska 26, Wrocław</p>
@@ -16,7 +16,7 @@ const InfoShortcuts = () => {
             </div>
 
             <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={smartphone} alt='dentist'></img>
+                <img className='info-shortcuts__icon-informations__icon' src={smartphone} alt='smartphone'></img>
                 <div className='info-shortcuts__icon-informations__informations'>
                     <h4>Rejestracja</h4>
                     <p>603-068-648</p>
@@ -24,7 +24,7 @@ const InfoShortcuts = () => {
             </div>
 
             <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={clock} alt='dentist'></img>
+                <img className='info-shortcuts__icon-informations__icon' src={clock} alt='clock'></img>
                 <div className='info-shortcuts__icon-informations__informations'>
                     <h4>Godziny otwarcia</h4>
                     <p>Pon-Pt - 9:00-20:00</p>
