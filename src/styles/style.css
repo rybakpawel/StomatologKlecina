@@ -15,40 +15,6 @@ li {
   list-style: none;
 }
 
-.appointment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10% 0;
-  background-image: url("../assets/images/background.jpg");
-  background-size: cover;
-}
-
-.appointment__title {
-  color: #fff;
-  margin-bottom: 4rem;
-  font-size: 2.6rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.appointment__pin {
-  min-width: 1.2rem;
-  min-height: 1.2rem;
-}
-
-.basic-informations {
-  padding-top: 3rem;
-  background-color: #f8f8f8;
-}
-
 .button--transparent {
   background-color: transparent;
   border: none;
@@ -173,6 +139,106 @@ li {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__logo {
+  max-width: 100vw;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.aboutMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 8%;
+}
+
+.aboutMe__subtitle {
+  margin: 2.5rem 0 1rem 0;
+  color: #EA8F7C;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.aboutMe__subtitle__line {
+  display: block;
+  width: 10%;
+  margin-top: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.aboutMe__title {
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+.aboutMe__description {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.appointment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10% 0;
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+}
+
+.appointment__title {
+  color: #fff;
+  margin-bottom: 4rem;
+  font-size: 2.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.appointment__pin {
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+}
+
+.basic-informations {
+  padding-top: 3rem;
+  background-color: #f8f8f8;
+}
+
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,33 +270,5 @@ li {
 .swiper-button-prev,
 .swiper-button-next {
   color: #fff !important;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.header__logo {
-  max-width: 100vw;
-}
-
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

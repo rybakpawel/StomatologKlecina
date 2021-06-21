@@ -1,11 +1,12 @@
 @import 'base/vars';
 @import 'base/mixins';
 @import 'base/app';
-@import 'components/appointment';
-@import 'components/basicInformations';
 @import 'components/button';
 @import 'components/card';
 @import 'components/infoShortcuts';
-@import 'components/slider';
 @import 'layout/header';
 @import 'layout/menu';
+@import 'sections/aboutMe';
+@import 'sections/appointment';
+@import 'sections/basicInformations';
+@import 'sections/slider';

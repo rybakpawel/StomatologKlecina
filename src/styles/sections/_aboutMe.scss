@@ -1,0 +1,32 @@
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    margin: 8%;
+
+    &__subtitle {
+        margin: 2.5rem 0 1rem 0;
+        color: $base-color;
+        font-size: 2rem;
+        font-weight: normal;
+
+        &__line {
+            display: block;
+            width: 10%;
+            margin-top: 1rem;
+            border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        color: $darker-font;
+        font-size: 2.4rem;
+        font-weight: normal;
+    }
+
+    &__description {
+        color: $lighter-font;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}

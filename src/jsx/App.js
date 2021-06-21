@@ -1,9 +1,9 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import '../styles/style.css'
 import HomePage from './pages/HomePage'
-import AboutMe from './pages/AboutMe'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
+import AboutMe from './pages/AboutMePage'
+import Services from './pages/ServicesPage'
+import Contact from './pages/ContactPage'
 
 
 function App() {
