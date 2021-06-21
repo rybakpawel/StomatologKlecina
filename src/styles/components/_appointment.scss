@@ -1,0 +1,21 @@
+.appointment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+
+    &__title {
+        color: #fff;
+        margin-bottom: 4rem;
+        font-size: 2.6rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__pin {
+        min-width: 1.2rem;
+        min-height: 1.2rem;
+    }
+}

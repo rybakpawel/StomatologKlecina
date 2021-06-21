@@ -7,7 +7,7 @@
 }
 
 .button--border-white {
-    @include button($border: 1px solid, $color: #fff);
+    @include button($border: 1px solid, $color: #fff, $letter-spacing: 1px);
 }
 
 .button--border-color {
