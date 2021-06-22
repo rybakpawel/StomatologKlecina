@@ -67,7 +67,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 0 15% 2.5rem 15%;
+  padding: 2.5rem 0;
 }
 
 .card__iconWrapper {
@@ -87,19 +87,14 @@ li {
   border-radius: 50%;
 }
 
-.card__icon {
-  max-width: 5.5rem;
-}
-
 .card__title {
   margin: 2rem 0 1.5rem 0;
   font-weight: normal;
-  font-size: 2.6rem;
   color: rgba(0, 0, 0, 0.6);
 }
 
 .card__description {
-  font-size: 2rem;
+  margin-bottom: 2rem;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -167,7 +162,7 @@ li {
   margin-top: 2rem;
 }
 
-.aboutMe {
+.about-me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,28 +173,28 @@ li {
   margin: 8%;
 }
 
-.aboutMe__subtitle {
+.about-me__subtitle {
   margin: 2.5rem 0 1rem 0;
   color: #EA8F7C;
   font-size: 2rem;
   font-weight: normal;
 }
 
-.aboutMe__subtitle__line {
+.about-me__subtitle__line {
   display: block;
   width: 10%;
   margin-top: 1rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.aboutMe__title {
+.about-me__title {
   margin-bottom: 1rem;
   color: rgba(0, 0, 0, 0.6);
   font-size: 2.4rem;
   font-weight: normal;
 }
 
-.aboutMe__description {
+.about-me__description {
   color: rgba(0, 0, 0, 0.4);
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -235,8 +230,29 @@ li {
 }
 
 .basic-informations {
-  padding-top: 3rem;
+  padding: 3rem 15% 0 15%;
   background-color: #f8f8f8;
+}
+
+.servicesShortcuts {
+  padding: 10%;
+}
+
+.servicesShortcuts__title {
+  margin-bottom: 2rem;
+  color: #EA8F7C;
+  font-size: 2.2rem;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.servicesShortcuts__title__line {
+  display: block;
+  width: 10%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .slider {

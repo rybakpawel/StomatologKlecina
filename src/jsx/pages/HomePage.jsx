@@ -4,6 +4,7 @@ import Slider from '../components/Slider'
 import BasicInformations from '../components/BasicInformations'
 import Appointment from '../components/Appointment'
 import AboutMe from '../components/AboutMe'
+import ServicesShortcuts from '../components/ServicesShortcuts'
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <BasicInformations />
             <Appointment />
             <AboutMe subtitle={true} />
+            <ServicesShortcuts />
         </>
     )
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 15% 2.5rem 15%;
+    padding: 2.5rem 0;
 
     &__iconWrapper {
         display: flex;
@@ -16,19 +16,14 @@
         border-radius: 50%;
     }
 
-    &__icon {
-        max-width: 5.5rem;
-    }
-
     &__title {
         margin: 2rem 0 1.5rem 0;
         font-weight: normal;
-        font-size: 2.6rem;
         color: $darker-font;
     }
 
     &__description {
-        font-size: 2rem;
+        margin-bottom: 2rem;
         color: $lighter-font;
     }
 }
