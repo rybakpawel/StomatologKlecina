@@ -8,13 +8,5 @@
         font-weight: normal;
         text-align: center;
         text-transform: uppercase;
-
-        &__line {
-            display: block;
-            width: 10%;
-            margin: 0 auto;
-            margin-top: 1rem;
-            border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
-        }
     }
 }

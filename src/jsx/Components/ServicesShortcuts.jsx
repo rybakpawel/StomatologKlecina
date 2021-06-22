@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import Line from './Line'
 import firstAid from '../../assets/icons/firstAid.svg'
 import dentalCare from '../../assets/icons/dentalCare.svg'
 import baby from '../../assets/icons/baby.svg'
@@ -34,7 +35,7 @@ const ServicesShortcuts = () => {
         <section className='servicesShortcuts'>
             <h2 className='servicesShortcuts__title'>
                 Oferuję szeroki zakres usług stomatologicznych w najwyższym standardzie
-                <span className='servicesShortcuts__title__line'></span>
+                <Line center={true} />
             </h2>
             <Card icon={services[0].icon} title={services[0].title} description={services[0].description} button={btn} />
             <Card icon={services[1].icon} title={services[1].title} description={services[1].description} button={btn} />

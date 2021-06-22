@@ -134,6 +134,22 @@ li {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.line {
+  display: block;
+  width: 10%;
+  padding-top: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.line--center {
+  margin: 0 auto;
+}
+
+.line--all-over {
+  width: 100%;
+  border-width: 1px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,13 +194,6 @@ li {
   color: #EA8F7C;
   font-size: 2rem;
   font-weight: normal;
-}
-
-.about-me__subtitle__line {
-  display: block;
-  width: 10%;
-  margin-top: 1rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .about-me__title {
@@ -234,6 +243,52 @@ li {
   background-color: #f8f8f8;
 }
 
+.comments {
+  margin: 0 10%;
+}
+
+.comments__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5rem 0;
+}
+
+.comments__title {
+  color: #EA8F7C;
+  font-size: 2.2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.comments__avatar {
+  max-width: 10rem;
+  min-width: 10rem;
+  margin-bottom: 1rem;
+}
+
+.comments__comment {
+  margin: 3rem 0 1.5rem 0;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 2rem;
+  text-align: center;
+}
+
+.comments__name {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
 .servicesShortcuts {
   padding: 10%;
 }
@@ -245,14 +300,6 @@ li {
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
-}
-
-.servicesShortcuts__title__line {
-  display: block;
-  width: 10%;
-  margin: 0 auto;
-  margin-top: 1rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .slider {

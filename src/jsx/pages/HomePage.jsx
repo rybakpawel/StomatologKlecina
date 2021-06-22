@@ -5,6 +5,8 @@ import BasicInformations from '../components/BasicInformations'
 import Appointment from '../components/Appointment'
 import AboutMe from '../components/AboutMe'
 import ServicesShortcuts from '../components/ServicesShortcuts'
+import Comments from '../components/Comments'
+import InfoShortcuts from '../components/InfoShortcuts'
 
 const HomePage = () => {
     return (
@@ -15,6 +17,8 @@ const HomePage = () => {
             <Appointment />
             <AboutMe subtitle={true} />
             <ServicesShortcuts />
+            <Comments />
+            <InfoShortcuts />
         </>
     )
 }

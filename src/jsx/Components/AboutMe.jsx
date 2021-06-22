@@ -1,4 +1,5 @@
 import React from 'react'
+import Line from './Line'
 import dentistImage from '../../assets/images/dentist_magda.jpg'
 
 const AboutMe = ({ subtitle }) => {
@@ -8,7 +9,7 @@ const AboutMe = ({ subtitle }) => {
             {subtitle ?
                 <h4 className='about-me__subtitle'>
                     O mnie
-                    <span className='about-me__subtitle__line'></span>
+                    <Line />
                 </h4>
                 : null}
             <h2 className='about-me__title'>Lek. Magdalena Chorążykiewicz</h2>
