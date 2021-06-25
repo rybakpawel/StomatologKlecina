@@ -7,6 +7,7 @@ import AboutMe from '../components/AboutMe'
 import ServicesShortcuts from '../components/ServicesShortcuts'
 import Comments from '../components/Comments'
 import InfoShortcuts from '../components/InfoShortcuts'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
     return (
@@ -19,6 +20,7 @@ const HomePage = () => {
             <ServicesShortcuts />
             <Comments />
             <InfoShortcuts />
+            <Footer />
         </>
     )
 }
