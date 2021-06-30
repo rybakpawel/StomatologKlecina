@@ -31,10 +31,22 @@ const BasicInformations = () => {
 
     return (
         <section className='basic-informations'>
-            <Card icon={informations[0].icon} title={informations[0].title} description={informations[0].description} />
-            <Card icon={informations[1].icon} title={informations[1].title} description={informations[1].description} />
-            <Card icon={informations[2].icon} title={informations[2].title} description={informations[2].description} />
-            <Card icon={informations[3].icon} title={informations[3].title} description={informations[3].description} />
+            <Card
+                icon={informations[0].icon}
+                title={informations[0].title}
+                description={informations[0].description} />
+            <Card
+                icon={informations[1].icon}
+                title={informations[1].title}
+                description={informations[1].description} />
+            <Card
+                icon={informations[2].icon}
+                title={informations[2].title}
+                description={informations[2].description} />
+            <Card
+                icon={informations[3].icon}
+                title={informations[3].title}
+                description={informations[3].description} />
         </section>
     )
 }

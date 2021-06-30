@@ -4,11 +4,28 @@
     padding: 8%;
     background-color: #fff;
 
+    @media (min-width: 640px) {
+        flex-direction: row;
+        align-items: center;
+        padding: 5%;
+    }
+
+    &__image {
+        @media (min-width: 640px) {
+            max-width: 40%;
+            margin-right: 3%;
+        }
+    }
+
     &__subtitle {
-        margin: 2.5rem 0 1rem 0;
+        margin: 5% 0 1rem 0;
         color: $base-color;
         font-size: 2rem;
         font-weight: normal;
+
+        @media (min-width: 640px) {
+            font-size: 1.6rem;
+        }
     }
 
     &__title {
@@ -16,11 +33,19 @@
         color: $darker-font;
         font-size: 2.4rem;
         font-weight: normal;
+
+        @media (min-width: 640px) {
+            font-size: 2rem;
+        }
     }
 
     &__description {
         color: $lighter-font;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         line-height: 2.5rem;
+
+        @media (min-width: 640px) {
+            font-size: 1.3rem;
+        }
     }
 }
