@@ -31,6 +31,10 @@
         margin-bottom: 2rem;
         font-size: 1.6rem;
         color: $lighter-font;
+
+        @media (min-width: 992px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__button-wrapper {

@@ -34,44 +34,48 @@ const Slider = () => {
     SwiperCore.use([Pagination, Navigation]);
 
     return (
-        <Swiper
-            slidesPerView={1}
-            spaceBetween={0}
-            loop={true}
-            pagination={{ "clickable": true }}
-            navigation={true}
-            className="mySwiper">
-            <SwiperSlide>
-                <section className='slider'>
-                    <div className='slider__text'>
-                        <h1 className='slider__text__title'>{slides[0].title}</h1>
-                        <p className='slider__text__description'>{slides[0].description}</p>
-                        <Button variant='border-white' title={slides[0].button} font={{ fontSize: '1.2rem' }} />
-                    </div>
-                    <img className='slider__image' src={slides[0].image} alt="stomatologklecina" />
-                </section>
-            </SwiperSlide>
-            <SwiperSlide>
-                <section className='slider'>
-                    <div className='slider__text'>
-                        <h1 className='slider__text__title'>{slides[1].title}</h1>
-                        <p className='slider__text__description'>{slides[1].description}</p>
-                        <Button variant='border-white' title={slides[1].button} font={{ fontSize: '1.2rem' }} />
-                    </div>
-                    <img className='slider__image' src={slides[1].image} alt="stomatologklecina" />
-                </section>
-            </SwiperSlide>
-            <SwiperSlide>
-                <section className='slider'>
-                    <div className='slider__text'>
-                        <h1 className='slider__text__title'>{slides[2].title}</h1>
-                        <p className='slider__text__description'>{slides[2].description}</p>
-                        <Button variant='border-white' title={slides[2].button} font={{ fontSize: '1.2rem' }} />
-                    </div>
-                    <img className='slider__image' src={slides[2].image} alt="stomatologklecina" />
-                </section>
-            </SwiperSlide>
-        </Swiper>
+        <div className='slider-wrapper'>
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={0}
+                loop={true}
+                pagination={{ "clickable": true }}
+                navigation={true}
+                className="mySwiper">
+
+                <SwiperSlide>
+                    <section className='slider'>
+                        <div className='slider__text'>
+                            <h1 className='slider__text__title'>{slides[0].title}</h1>
+                            <p className='slider__text__description'>{slides[0].description}</p>
+                            <Button variant='border-white' title={slides[0].button} font={{ fontSize: '1.2rem' }} />
+                        </div>
+                        <img className='slider__image' src={slides[0].image} alt="stomatologklecina" />
+                    </section>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <section className='slider'>
+                        <div className='slider__text'>
+                            <h1 className='slider__text__title'>{slides[1].title}</h1>
+                            <p className='slider__text__description'>{slides[1].description}</p>
+                            <Button variant='border-white' title={slides[1].button} font={{ fontSize: '1.2rem' }} />
+                        </div>
+                        <img className='slider__image' src={slides[1].image} alt="stomatologklecina" />
+                    </section>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <section className='slider'>
+                        <div className='slider__text'>
+                            <h1 className='slider__text__title'>{slides[2].title}</h1>
+                            <p className='slider__text__description'>{slides[2].description}</p>
+                            <Button variant='border-white' title={slides[2].button} font={{ fontSize: '1.2rem' }} />
+                        </div>
+                        <img className='slider__image' src={slides[2].image} alt="stomatologklecina" />
+                    </section>
+                </SwiperSlide>
+            </Swiper>
+            <div className='slider-wrapper__polygon'></div>
+        </div>
     )
 }
 

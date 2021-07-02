@@ -1,11 +1,15 @@
 .basic-informations {
     display: flex;
     flex-direction: column;
-    padding: 3rem 5% 0 5%;
+    padding: 3% 3% 0 3%;
     background-color: #f8f8f8;
 
     @media (min-width: 640px) {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    @media (min-width: 992px) {
+        flex-wrap: nowrap;
     }
 }

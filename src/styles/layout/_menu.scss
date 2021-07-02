@@ -8,4 +8,8 @@
     @media (min-width: 640px) {
         flex-direction: row;
     }
+
+    @media (min-width: 992px) {
+        margin-top: 0;
+    }
 }

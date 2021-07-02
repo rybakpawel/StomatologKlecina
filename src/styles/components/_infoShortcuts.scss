@@ -1,8 +1,12 @@
 .info-shortcuts {
     display: flex;
     flex-wrap: wrap;
-    padding: 5%;
+    padding: 4%;
     background-color: #fff;
+
+    @media (min-width: 992px) {
+        flex-wrap: nowrap;
+    }
 
     &__icon-informations {
         display: flex;
@@ -15,6 +19,13 @@
         @media (min-width: 640px) {
             flex-direction: row;
             text-align: left;
+        }
+
+        @media (min-width: 992px) {
+            justify-content: center;
+            flex-grow: 1;
+            width: auto;
+            margin-bottom: 0;
         }
 
         &__icon {
@@ -34,6 +45,10 @@
         &__informations {
             margin: 5px 0;
             font-size: 1.6rem;
+
+            @media (min-width: 992px) {
+                font-size: 1.3rem;
+            }
 
             h4 {
                 color: $darker-font;

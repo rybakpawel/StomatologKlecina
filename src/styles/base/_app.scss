@@ -8,6 +8,14 @@ html,
 button {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
+
+    @media (min-width: 768px) {
+        font-size: 11px;
+    }
+
+    // @media (min-width: 992px) {
+    //     font-size: 12px;
+    // }
 }
 
 li {

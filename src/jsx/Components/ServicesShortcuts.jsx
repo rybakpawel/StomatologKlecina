@@ -37,10 +37,13 @@ const ServicesShortcuts = () => {
                 Oferuję szeroki zakres usług stomatologicznych w najwyższym standardzie
                 <Line center={true} />
             </h2>
-            <Card icon={services[0].icon} title={services[0].title} description={services[0].description} button={btn} />
-            <Card icon={services[1].icon} title={services[1].title} description={services[1].description} button={btn} />
-            <Card icon={services[2].icon} title={services[2].title} description={services[2].description} button={btn} />
-            <Card icon={services[3].icon} title={services[3].title} description={services[3].description} button={btn} />
+            <div className='servicesShortcuts__shortcuts'>
+                <Card icon={services[0].icon} title={services[0].title} description={services[0].description} button={btn} />
+                <Card icon={services[1].icon} title={services[1].title} description={services[1].description} button={btn} />
+                <Card icon={services[2].icon} title={services[2].title} description={services[2].description} button={btn} />
+                <Card icon={services[3].icon} title={services[3].title} description={services[3].description} button={btn} />
+            </div>
+
         </section>
     )
 }

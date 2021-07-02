@@ -1,13 +1,23 @@
 .servicesShortcuts {
-    display: flex;
-    flex-direction: column;
     padding: 5%;
     background-color: #fff;
 
-    @media (min-width: 640px) {
-        flex-direction: row;
-        flex-wrap: wrap;
+    @media(min-width: 992px) {
         padding: 5% 0;
+    }
+
+    &__shortcuts {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 640px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media(min-width: 992px) {
+            flex-wrap: nowrap;
+        }
     }
 
     &__title {

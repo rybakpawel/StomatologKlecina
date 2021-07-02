@@ -6,8 +6,10 @@ import InfoShortcuts from './InfoShortcuts'
 const Header = () => {
     return (
         <header className='header'>
-            <img src={logo} alt='logo' className='header__logo' />
-            <Menu />
+            <div className='header__wrapper'>
+                <img src={logo} alt='logo' className='header__logo' />
+                <Menu />
+            </div>
             <InfoShortcuts />
         </header>
     )
