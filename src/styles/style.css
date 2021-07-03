@@ -18,6 +18,20 @@ button {
   }
 }
 
+@media (min-width: 1200px) {
+  html,
+  button {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    margin: 20px;
+    background-color: #e1e1df;
+  }
+}
+
 li {
   list-style: none;
 }
@@ -30,13 +44,20 @@ li {
   letter-spacing: 2px;
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
+  cursor: pointer;
   border-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: none;
+  transition: none;
 }
 
 @media (min-width: 992px) {
   .button--transparent {
     font-size: 1rem;
   }
+}
+
+.button--transparent:hover {
+  background-color: #e1e1df;
 }
 
 .button--full {
@@ -47,12 +68,21 @@ li {
   letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
   border-color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (min-width: 992px) {
   .button--full {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button--full {
+    margin-right: 1rem;
   }
 }
 
@@ -64,7 +94,15 @@ li {
   letter-spacing: 1px;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
   border-color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button--border-white:hover {
+  background-color: #fff;
+  color: #EA8F7C;
 }
 
 .button--border-color {
@@ -75,13 +113,27 @@ li {
   letter-spacing: 2px;
   color: #EA8F7C;
   text-transform: uppercase;
+  cursor: pointer;
   border-color: #EA8F7C;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (min-width: 992px) {
   .button--border-color {
     font-size: 1.2rem;
   }
+}
+
+@media (min-width: 1200px) {
+  .button--border-color {
+    font-size: 1rem;
+  }
+}
+
+.button--border-color:hover {
+  background-color: #EA8F7C;
+  color: #fff;
 }
 
 .card {
@@ -106,6 +158,12 @@ li {
   }
 }
 
+@media (min-width: 1200px) {
+  .card img {
+    width: 5.5rem;
+  }
+}
+
 .card__iconWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,11 +181,30 @@ li {
   border-radius: 50%;
 }
 
+@media (min-width: 1200px) {
+  .card__iconWrapper {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card__iconWrapper img {
+    width: 3.5rem;
+  }
+}
+
 .card__title {
   margin: 2rem 0 1.5rem 0;
   font-size: 1.8rem;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 1200px) {
+  .card__title {
+    font-size: 1.5rem;
+  }
 }
 
 .card__description {
@@ -139,6 +216,12 @@ li {
 @media (min-width: 992px) {
   .card__description {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card__description {
+    font-size: 1.3rem;
   }
 }
 
@@ -160,6 +243,12 @@ li {
   .info-shortcuts {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info-shortcuts {
+    padding: 2% 4%;
   }
 }
 
@@ -263,7 +352,6 @@ li {
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,9 +359,10 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   padding: 10%;
   background-color: #003647;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   color: #fff;
   z-index: -10;
   overflow-y: scroll;
@@ -388,6 +477,13 @@ li {
   }
 }
 
+@media (min-width: 1200px) {
+  .header__logo {
+    max-width: 40%;
+    margin: 0;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,6 +542,12 @@ li {
   .about-me__image {
     max-width: 40%;
     margin-right: 3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-me__image {
+    max-width: 35%;
   }
 }
 
@@ -544,6 +646,12 @@ li {
 @media (min-width: 992px) {
   .appointment__title {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .appointment__title {
+    font-size: 2rem;
   }
 }
 
@@ -753,6 +861,19 @@ li {
   .slider__image {
     width: 50%;
     margin-left: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider__image {
+    width: 40%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider__image {
+    width: 35%;
   }
 }
 

@@ -20,7 +20,7 @@ const HomePage = () => {
             <ServicesShortcuts />
             <Comments />
             <InfoShortcuts />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

@@ -13,9 +13,17 @@ button {
         font-size: 11px;
     }
 
-    // @media (min-width: 992px) {
-    //     font-size: 12px;
-    // }
+    @media (min-width: 1200px) {
+        font-size: 13px;
+    }
+}
+
+body {
+    @media (min-width: 1200px) {
+        margin: 20px;
+        background-color: #e1e1df;
+    }
+
 }
 
 li {

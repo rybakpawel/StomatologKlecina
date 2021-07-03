@@ -1,29 +1,38 @@
 import React from 'react'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
     return (
         <nav>
             <ul className='menu'>
                 <li>
-                    <Button
-                        variant='full'
-                        title='Strona główna' />
+                    <Link to='/'>
+                        <Button
+                            variant='full'
+                            title='Strona główna' />
+                    </Link>
                 </li>
                 <li>
-                    <Button
-                        variant='transparent'
-                        title='O mnie' />
+                    <Link to='/aboutme'>
+                        <Button
+                            variant='transparent'
+                            title='O mnie' />
+                    </Link>
                 </li>
                 <li>
-                    <Button
-                        variant='transparent'
-                        title='Usługi' />
+                    <Link to='/sevices'>
+                        <Button
+                            variant='transparent'
+                            title='Usługi' />
+                    </Link>
                 </li>
                 <li>
-                    <Button
-                        variant='transparent'
-                        title='Kontakt' />
+                    <Link to='/contact'>
+                        <Button
+                            variant='transparent'
+                            title='Kontakt' />
+                    </Link>
                 </li>
             </ul>
         </nav>

@@ -8,6 +8,10 @@
         flex-wrap: nowrap;
     }
 
+    @media (min-width: 1200px) {
+        padding: 2% 4%;
+    }
+
     &__icon-informations {
         display: flex;
         flex-direction: column;

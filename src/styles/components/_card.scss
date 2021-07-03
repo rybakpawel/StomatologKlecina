@@ -9,6 +9,12 @@
         flex-basis: 50%;
     }
 
+    img {
+        @media(min-width: 1200px) {
+            width: 5.5rem;
+        }
+    }
+
     &__iconWrapper {
         display: flex;
         justify-content: center;
@@ -18,6 +24,17 @@
         background-color: #fff;
         border: solid rgba($color: #000000, $alpha: 0.1) 1px;
         border-radius: 50%;
+
+        @media(min-width: 1200px) {
+            width: 9rem;
+            height: 9rem;
+        }
+
+        img {
+            @media(min-width: 1200px) {
+                width: 3.5rem;
+            }
+        }
     }
 
     &__title {
@@ -25,6 +42,10 @@
         font-size: 1.8rem;
         font-weight: normal;
         color: $darker-font;
+
+        @media (min-width: 1200px) {
+            font-size: 1.5rem;
+        }
     }
 
     &__description {
@@ -34,6 +55,10 @@
 
         @media (min-width: 992px) {
             font-size: 1.4rem;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 1.3rem;
         }
     }
 

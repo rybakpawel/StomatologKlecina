@@ -57,6 +57,15 @@
             width: 50%;
             margin-left: 5%;
         }
+
+        @media (min-width: 992px) {
+            width: 40%;
+            margin-right: 5%;
+        }
+
+        @media (min-width: 1200px) {
+            width: 35%;
+        }
     }
 }
 

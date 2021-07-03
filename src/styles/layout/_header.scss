@@ -22,5 +22,10 @@
             max-width: 45%;
             margin: 0;
         }
+
+        @media (min-width: 1200px) {
+            max-width: 40%;
+            margin: 0;
+        }
     }
 }

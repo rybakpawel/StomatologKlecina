@@ -1,8 +1,12 @@
 .button--transparent {
-    @include button;
+    @include button($transition: none);
 
     @media (min-width: 992px) {
         font-size: 1rem;
+    }
+
+    &:hover {
+        background-color: #e1e1df;
     }
 }
 
@@ -12,10 +16,19 @@
     @media (min-width: 992px) {
         font-size: 1rem;
     }
+
+    @media (min-width: 1200px) {
+        margin-right: 1rem;
+    }
 }
 
 .button--border-white {
     @include button($border: 1px solid, $font-size: 1.2rem, $color: #fff, $letter-spacing: 1px);
+
+    &:hover {
+        background-color: #fff;
+        color: $base-color;
+    }
 }
 
 .button--border-color {
@@ -23,5 +36,14 @@
 
     @media (min-width: 992px) {
         font-size: 1.2rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        background-color: $base-color;
+        color: #fff;
     }
 }
