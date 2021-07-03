@@ -48,7 +48,7 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[0].title}</h1>
                             <p className='slider__text__description'>{slides[0].description}</p>
-                            <Button variant='border-white' title={slides[0].button} font={{ fontSize: '1.2rem' }} />
+                            <Button variant='border-white' title={slides[0].button} />
                         </div>
                         <img className='slider__image' src={slides[0].image} alt="stomatologklecina" />
                     </section>
@@ -58,7 +58,7 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[1].title}</h1>
                             <p className='slider__text__description'>{slides[1].description}</p>
-                            <Button variant='border-white' title={slides[1].button} font={{ fontSize: '1.2rem' }} />
+                            <Button variant='border-white' title={slides[1].button} />
                         </div>
                         <img className='slider__image' src={slides[1].image} alt="stomatologklecina" />
                     </section>
@@ -68,7 +68,7 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[2].title}</h1>
                             <p className='slider__text__description'>{slides[2].description}</p>
-                            <Button variant='border-white' title={slides[2].button} font={{ fontSize: '1.2rem' }} />
+                            <Button variant='border-white' title={slides[2].button} />
                         </div>
                         <img className='slider__image' src={slides[2].image} alt="stomatologklecina" />
                     </section>

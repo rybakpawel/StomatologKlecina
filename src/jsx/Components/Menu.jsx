@@ -6,16 +6,24 @@ const Menu = () => {
         <nav>
             <ul className='menu'>
                 <li>
-                    <Button variant='full' title='Strona główna' />
+                    <Button
+                        variant='full'
+                        title='Strona główna' />
                 </li>
                 <li>
-                    <Button variant='transparent' title='O mnie' />
+                    <Button
+                        variant='transparent'
+                        title='O mnie' />
                 </li>
                 <li>
-                    <Button variant='transparent' title='Usługi' />
+                    <Button
+                        variant='transparent'
+                        title='Usługi' />
                 </li>
                 <li>
-                    <Button variant='transparent' title='Kontakt' />
+                    <Button
+                        variant='transparent'
+                        title='Kontakt' />
                 </li>
             </ul>
         </nav>

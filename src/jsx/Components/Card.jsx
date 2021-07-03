@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
+import WidthContext from '../context/widthContext'
 import Button from './Button'
-import getWidth from '../utils/orientation'
 
 const Card = ({ icon, title, description, button }) => {
-    const [width, setWidth] = useState(getWidth());
-
-    const handleWidth = () => {
-        setWidth(getWidth());
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', handleWidth);
-        return () => window.removeEventListener('resize', handleWidth);
-    }, []);
+    const { width } = useContext(WidthContext)
 
     return (
         <div className='card'>
@@ -25,7 +16,10 @@ const Card = ({ icon, title, description, button }) => {
             <h3 className='card__title' style={!button && width < 640 ? { fontSize: '2.6rem' } : null}>{title}</h3>
             <p className='card__description' style={!button && width < 640 ? { fontSize: '2rem' } : null}>{description}</p>
             <div className='card__button-wrapper'>
-                {button ? <Button variant='border-color' title={button} font={{ fontSize: '1.4rem' }} /> : null}
+                {button ? <Button
+                    variant='border-color'
+                    title={button} />
+                    : null}
             </div>
         </div>
     )

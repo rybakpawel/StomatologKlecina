@@ -9,8 +9,8 @@ const Appointment = () => {
         <section className='appointment'>
             <h2 className='appointment__title'>Umów się na wizytę kontrolną</h2>
             <div>
-                <Button variant='border-white' title='Mój profil na Znany Lekarz' font={{ fontSize: '1.2rem' }} />
-                <Button variant='border-white' title={whitePin} font={{ fontSize: '1.2rem' }} padding={{ padding: '1rem 1.4rem' }} />
+                <Button variant='border-white' title='Mój profil na Znany Lekarz' />
+                <Button variant='border-white' title={whitePin} padding={{ padding: '1rem 1.4rem' }} />
             </div>
         </section>
     )

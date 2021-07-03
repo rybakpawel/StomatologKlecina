@@ -26,26 +26,41 @@ li {
   background-color: transparent;
   border: none;
   border-radius: 2px;
+  font-size: 1.6rem;
   letter-spacing: 2px;
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   border-color: rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width: 992px) {
+  .button--transparent {
+    font-size: 1rem;
+  }
+}
+
 .button--full {
   background-color: #EA8F7C;
   border: none;
   border-radius: 2px;
+  font-size: 1.6rem;
   letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase;
   border-color: #fff;
 }
 
+@media (min-width: 992px) {
+  .button--full {
+    font-size: 1rem;
+  }
+}
+
 .button--border-white {
   background-color: transparent;
   border: 1px solid;
   border-radius: 2px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   color: #fff;
   text-transform: uppercase;
@@ -56,10 +71,17 @@ li {
   background-color: transparent;
   border: 1px solid;
   border-radius: 2px;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   color: #EA8F7C;
   text-transform: uppercase;
   border-color: #EA8F7C;
+}
+
+@media (min-width: 992px) {
+  .button--border-color {
+    font-size: 1.2rem;
+  }
 }
 
 .card {
@@ -348,6 +370,9 @@ li {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -359,6 +384,7 @@ li {
 @media (min-width: 992px) {
   .header__logo {
     max-width: 45%;
+    margin: 0;
   }
 }
 

@@ -1,15 +1,27 @@
 .button--transparent {
     @include button;
+
+    @media (min-width: 992px) {
+        font-size: 1rem;
+    }
 }
 
 .button--full {
     @include button($base-color, $color:#fff);
+
+    @media (min-width: 992px) {
+        font-size: 1rem;
+    }
 }
 
 .button--border-white {
-    @include button($border: 1px solid, $color: #fff, $letter-spacing: 1px);
+    @include button($border: 1px solid, $font-size: 1.2rem, $color: #fff, $letter-spacing: 1px);
 }
 
 .button--border-color {
-    @include button($border: 1px solid, $color: $base-color);
+    @include button($border: 1px solid, $font-size: 1.4rem, $color: $base-color);
+
+    @media (min-width: 992px) {
+        font-size: 1.2rem;
+    }
 }

@@ -1,7 +1,8 @@
-@mixin button($bgc: transparent, $border: none, $letter-spacing: 2px, $color: $darker-font, $text-transform: uppercase) {
+@mixin button($bgc: transparent, $border: none, $font-size: 1.6rem, $letter-spacing: 2px, $color: $darker-font, $text-transform: uppercase) {
     background-color: $bgc;
     border: $border;
     border-radius: 2px;
+    font-size: $font-size;
     letter-spacing: $letter-spacing;
     color: $color;
     text-transform: $text-transform;
