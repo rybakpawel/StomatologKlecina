@@ -1,7 +1,6 @@
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 2.5rem 2%;
 
@@ -15,10 +14,18 @@
         }
     }
 
-    &__iconWrapper {
+    &__information-wrapper {
+        transition: transform .2s;
+
+        &--short {
+            transform: translateY(50px);
+        }
+    }
+
+    &__icon-wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
+        margin: 0 auto;
         width: 11rem;
         height: 11rem;
         background-color: #fff;
@@ -52,6 +59,7 @@
         margin-bottom: 2rem;
         font-size: 1.6rem;
         color: $lighter-font;
+        transition: opacity .2s;
 
         @media (min-width: 992px) {
             font-size: 1.4rem;
@@ -60,9 +68,18 @@
         @media (min-width: 1200px) {
             font-size: 1.3rem;
         }
+
+        &--short {
+            opacity: 0;
+        }
     }
 
     &__button-wrapper {
         margin-top: auto;
+        transition: opacity .2s;
+
+        &--short {
+            opacity: 0;
+        }
     }
 }

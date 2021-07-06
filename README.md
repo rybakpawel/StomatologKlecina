@@ -4,8 +4,10 @@
 ## Technologies, methodologies, libraries etc.
 ###### React.js
 ###### React Router
+###### React Device Detect
 ###### SCSS
 ###### BEM
 ###### Swiper
+###### Flaticon
 
 
