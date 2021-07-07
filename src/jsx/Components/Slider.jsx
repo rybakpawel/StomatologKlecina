@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
+import WidthContext from '../context/widthContext'
 import Button from './Button'
 import dentistTransparent from '../../assets/images/dentist_transparent.png'
 import chair from '../../assets/images/chair.jpg'
@@ -33,6 +35,8 @@ const Slider = () => {
 
     SwiperCore.use([Pagination, Navigation]);
 
+    const { width } = useContext(WidthContext)
+
     return (
         <div className='slider-wrapper'>
             <Swiper
@@ -48,9 +52,11 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[0].title}</h1>
                             <p className='slider__text__description'>{slides[0].description}</p>
-                            <Button variant='border-white' title={slides[0].button} />
+                            <Link to='/services'>
+                                <Button variant='border-white' title={slides[0].button} />
+                            </Link>
                         </div>
-                        <img className='slider__image' src={slides[0].image} alt="stomatologklecina" />
+                        {width < 640 ? null : <img className='slider__image slider__image--bottom' src={slides[0].image} alt="stomatologklecina" />}
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -58,9 +64,11 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[1].title}</h1>
                             <p className='slider__text__description'>{slides[1].description}</p>
-                            <Button variant='border-white' title={slides[1].button} />
+                            <Link to='/'>
+                                <Button variant='border-white' title={slides[1].button} />
+                            </Link>
                         </div>
-                        <img className='slider__image' src={slides[1].image} alt="stomatologklecina" />
+                        {width < 640 ? null : <img className='slider__image' src={slides[1].image} alt="stomatologklecina" />}
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -68,9 +76,11 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[2].title}</h1>
                             <p className='slider__text__description'>{slides[2].description}</p>
-                            <Button variant='border-white' title={slides[2].button} />
+                            <Link to='/aboutMe'>
+                                <Button variant='border-white' title={slides[2].button} />
+                            </Link>
                         </div>
-                        <img className='slider__image' src={slides[2].image} alt="stomatologklecina" />
+                        {width < 640 ? null : <img className='slider__image' src={slides[2].image} alt="stomatologklecina" />}
                     </section>
                 </SwiperSlide>
             </Swiper>

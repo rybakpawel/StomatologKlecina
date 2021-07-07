@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
 
-const Contact = () => {
+const ContactPage = () => {
     return (
         <>
-            <Header />
+            <Header route='contact' />
         </>
     )
 }
 
-export default Contact;
+export default ContactPage;

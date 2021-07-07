@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
+import AboutMe from '../components/AboutMe'
+import InfoShortcuts from '../components/InfoShortcuts'
 
-const AboutMe = () => {
+const AboutMePage = () => {
     return (
         <>
-            <Header />
+            <Header route='aboutme' />
+            <AboutMe />
+            <InfoShortcuts />
         </>
     )
 }
 
-export default AboutMe;
+export default AboutMePage;

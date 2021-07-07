@@ -1,4 +1,5 @@
 .slider-wrapper {
+    background-color: $base-color;
     position: relative;
     z-index: 3;
 
@@ -29,11 +30,14 @@
 
     @media (min-width: 640px) {
         flex-direction: row;
-        align-items: center;
     }
 
     &__text {
         margin-bottom: 5%;
+
+        @media (min-width: 640px) {
+            margin: 5% 0 0 0;
+        }
 
         @media (min-width: 992px) {
             text-align: left;
@@ -52,11 +56,8 @@
     }
 
     &__image {
-
-        @media (min-width: 640px) {
-            width: 50%;
-            margin-left: 5%;
-        }
+        width: 50%;
+        margin-left: 5%;
 
         @media (min-width: 992px) {
             width: 40%;
@@ -69,6 +70,10 @@
 
         @media (min-width: 1400px) {
             width: 30%;
+        }
+
+        &--bottom {
+            transform: translateY(20%);
         }
     }
 }

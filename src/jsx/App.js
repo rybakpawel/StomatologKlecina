@@ -4,9 +4,9 @@ import WidthContext from './context/widthContext'
 import getWidth from './utils/orientation'
 import '../styles/style.css'
 import HomePage from './pages/HomePage'
-import AboutMe from './pages/AboutMePage'
-import Services from './pages/ServicesPage'
-import Contact from './pages/ContactPage'
+import AboutMePage from './pages/AboutMePage'
+import ServicesPage from './pages/ServicesPage'
+import ContactPage from './pages/ContactPage'
 
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/aboutme" exact component={AboutMe} />
-            <Route path="/services" exact component={Services} />
-            <Route path="/contact" exact component={Contact} />
+            <Route path="/aboutme" exact component={AboutMePage} />
+            <Route path="/services" exact component={ServicesPage} />
+            <Route path="/contact" exact component={ContactPage} />
           </Switch>
         </BrowserRouter>
       </WidthContext.Provider>

@@ -2,35 +2,35 @@ import React from 'react'
 import Button from './Button'
 import { Link } from 'react-router-dom'
 
-const Menu = () => {
+const Menu = ({ route }) => {
     return (
         <nav>
             <ul className='menu'>
                 <li>
                     <Link to='/'>
                         <Button
-                            variant='full'
+                            variant={route === '/' ? 'full' : 'transparent'}
                             title='Strona główna' />
                     </Link>
                 </li>
                 <li>
-                    <Link to='/aboutme'>
+                    <Link to='aboutme'>
                         <Button
-                            variant='transparent'
+                            variant={route === 'aboutme' ? 'full' : 'transparent'}
                             title='O mnie' />
                     </Link>
                 </li>
                 <li>
-                    <Link to='/sevices'>
+                    <Link to='services'>
                         <Button
-                            variant='transparent'
+                            variant={route === 'services' ? 'full' : 'transparent'}
                             title='Usługi' />
                     </Link>
                 </li>
                 <li>
-                    <Link to='/contact'>
+                    <Link to='contact'>
                         <Button
-                            variant='transparent'
+                            variant={route === 'contact' ? 'full' : 'transparent'}
                             title='Kontakt' />
                     </Link>
                 </li>

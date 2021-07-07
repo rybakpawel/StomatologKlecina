@@ -3,6 +3,13 @@ import Line from './Line'
 import dentistImage from '../../assets/images/dentist_magda.jpg'
 
 const AboutMe = ({ subtitle }) => {
+    let alternate
+    if (!subtitle) {
+        alternate = 'about-me__title--alternate'
+    } else {
+        alternate = ''
+    }
+
     return (
         <section className='about-me'>
             <img src={dentistImage} alt='dentist' className='about-me__image' />
@@ -13,7 +20,7 @@ const AboutMe = ({ subtitle }) => {
                         <Line />
                     </h4>
                     : null}
-                <h2 className='about-me__title'>Lek. Magdalena Chorążykiewicz</h2>
+                <h2 className={`about-me__title ${alternate}`}>Lek. Magdalena Chorążykiewicz</h2>
                 <p className='about-me__description'>Nazywam się Magdalena Chorążykiewicz i prowadzę Indywidualną Praktykę Stomatologiczną. Studia ukończyłam na Wydziale Lekarsko-Stomatologicznym Akademii Medycznej we Wrocławiu. Od niemal 20. lat zajmuję się dbaniem o zdrowie zębów swoich pacjentów. Posiadam II stopień specjalizacji w zakresie stomatologii zachowawczej. Dzięki ustawicznemu kształceniu i nowoczesnemu sprzętowi oferuję Państwu leczenie na najwyższym poziomie.</p>
             </div>
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
 
-const Services = () => {
+const ServicesPage = () => {
     return (
         <>
-            <Header />
+            <Header route='services' />
         </>
     )
 }
 
-export default Services;
+export default ServicesPage;

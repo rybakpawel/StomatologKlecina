@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 const HomePage = () => {
     return (
         <>
-            <Header />
+            <Header route='/' />
             <Slider />
             <BasicInformations />
             <Appointment />
