@@ -541,6 +541,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 8%;
+  text-align: left;
   background-color: #fff;
 }
 
@@ -625,6 +626,10 @@ li {
   .about-me__description {
     font-size: 1.6rem;
   }
+}
+
+.about-me button {
+  margin-top: 10%;
 }
 
 .appointment {
@@ -805,6 +810,109 @@ li {
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
+}
+
+.services-short-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8%;
+  text-align: center;
+  background-color: #fff;
+  background-image: url("../assets/images/background.jpg");
+}
+
+@media (min-width: 640px) {
+  .services-short-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 640px) {
+  .services-short-info__image {
+    max-width: 40%;
+    margin-right: 3%;
+    margin-right: 0;
+    margin-left: 3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-short-info__image {
+    max-width: 35%;
+  }
+}
+
+.services-short-info__subtitle {
+  margin: 5% 0 1rem 0;
+  color: #EA8F7C;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+@media (min-width: 640px) {
+  .services-short-info__subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-short-info__subtitle {
+    font-size: 2rem;
+  }
+}
+
+.services-short-info__title {
+  margin-bottom: 5%;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+@media (min-width: 640px) {
+  .services-short-info__title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-short-info__title {
+    font-size: 2.6rem;
+  }
+}
+
+.services-short-info__title--alternate {
+  color: #EA8F7C;
+}
+
+.services-short-info__description {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .services-short-info__description {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-short-info__description {
+    font-size: 1.6rem;
+  }
+}
+
+.services-short-info button {
+  margin-top: 10%;
 }
 
 .slider-wrapper {
