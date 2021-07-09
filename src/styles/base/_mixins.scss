@@ -37,7 +37,8 @@
 
     @media (min-width: 640px) {
         flex-direction: row;
-        padding: 5%;
+        text-align: left;
+        padding: 5% 5% 5% 8%;
     }
 
     &__image {

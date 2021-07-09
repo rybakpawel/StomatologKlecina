@@ -36,6 +36,13 @@ li {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
 .button--transparent {
   background-color: transparent;
   border: none;
@@ -551,7 +558,8 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 5%;
+    text-align: left;
+    padding: 5% 5% 5% 8%;
   }
 }
 
@@ -763,6 +771,67 @@ li {
   font-weight: normal;
 }
 
+.services-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5%;
+  background-color: #f8f8f8;
+}
+
+.services-icons__wrapper {
+  text-align: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  .services-icons__wrapper {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+.services-icons__circle {
+  position: relative;
+  background-color: #fff;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .services-icons__circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.services-icons__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  max-width: 50%;
+}
+
+.services-icons__title {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .services-icons__title {
+    font-size: 1.5rem;
+  }
+}
+
 .servicesShortcuts {
   padding: 5%;
   background-color: #fff;
@@ -832,7 +901,8 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 5%;
+    text-align: left;
+    padding: 5% 5% 5% 8%;
   }
 }
 
