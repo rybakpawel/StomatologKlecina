@@ -5,39 +5,52 @@ import pin from '../../assets/icons/pin.svg'
 import smartphone from '../../assets/icons/smartphone.svg'
 
 const InfoShortcuts = () => {
+    const informationsList = [
+        {
+            id: 1,
+            icon: pin,
+            title: 'Adres',
+            description: 'ul. Kostrzyńska 26, Wrocław'
+        },
+        {
+            id: 2,
+            icon: smartphone,
+            title: 'Rejestracja',
+            description: '603-068-648'
+        },
+        {
+            id: 3,
+            icon: clock,
+            title: 'Godziny otwarcia',
+            description: 'Pon-Pt - 9:00-20:00'
+        },
+        {
+            id: 4,
+            icon: dentist,
+            title: 'Stomatolog',
+            description: 'Lek. Magdalena Chorążykiewicz'
+        },
+    ]
+
+    const informationsContainer = informationsList.map(info => {
+        const { id, icon, title, description } = info
+        return (
+            <div className='info-shortcuts__icon-informations' key={id}>
+                <img className='info-shortcuts__icon-informations__icon'
+                    src={icon}
+                    alt={title}>
+                </img>
+                <div className='info-shortcuts__icon-informations__informations'>
+                    <h4>{title}</h4>
+                    <p>{description}</p>
+                </div>
+            </div>
+        )
+    })
+
     return (
         <section className='info-shortcuts'>
-            <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={pin} alt='pin'></img>
-                <div className='info-shortcuts__icon-informations__informations'>
-                    <h4>Adres</h4>
-                    <p>ul. Kostrzyńska 26, Wrocław</p>
-                </div>
-            </div>
-
-            <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={smartphone} alt='smartphone'></img>
-                <div className='info-shortcuts__icon-informations__informations'>
-                    <h4>Rejestracja</h4>
-                    <p>603-068-648</p>
-                </div>
-            </div>
-
-            <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={clock} alt='clock'></img>
-                <div className='info-shortcuts__icon-informations__informations'>
-                    <h4>Godziny otwarcia</h4>
-                    <p>Pon-Pt - 9:00-20:00</p>
-                </div>
-            </div>
-
-            <div className='info-shortcuts__icon-informations'>
-                <img className='info-shortcuts__icon-informations__icon' src={dentist} alt='dentist'></img>
-                <div className='info-shortcuts__icon-informations__informations'>
-                    <h4>Stomatolog</h4>
-                    <p>Lek. Magdalena Chorążykiewicz</p>
-                </div>
-            </div>
+            {informationsContainer}
         </section>
     )
 }
