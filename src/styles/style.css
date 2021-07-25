@@ -718,7 +718,10 @@ li {
 
 .comments {
   padding: 0 10%;
-  background-color: #fff;
+}
+
+.comments--pink {
+  background-image: url("../assets/images/background.jpg");
 }
 
 .comments__wrapper {
@@ -758,10 +761,18 @@ li {
   text-align: center;
 }
 
+.comments__comment--pink {
+  color: #fff;
+}
+
 .comments__name {
   color: rgba(0, 0, 0, 0.4);
   font-size: 1.6rem;
   font-weight: normal;
+}
+
+.comments__name--pink {
+  color: #fff;
 }
 
 .services-details {

@@ -1,6 +1,9 @@
 .comments {
     padding: 0 10%;
-    background-color: #fff;
+
+    &--pink {
+        background-image: url("../assets/images/background.jpg");
+    }
 
     &__wrapper {
         display: flex;
@@ -30,11 +33,19 @@
         color: $darker-font;
         line-height: 2rem;
         text-align: center;
+
+        &--pink {
+            color: #fff;
+        }
     }
 
     &__name {
         color: $lighter-font;
         font-size: 1.6rem;
         font-weight: normal;
+
+        &--pink {
+            color: #fff;
+        }
     }
 }
