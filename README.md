@@ -13,5 +13,7 @@
  - Back-end
   - Express.js
   - Nodemon
+  - Mongoose
+  - Dotenv
 
 
