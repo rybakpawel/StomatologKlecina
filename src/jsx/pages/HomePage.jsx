@@ -15,7 +15,7 @@ const HomePage = () => {
             <Header route='/' />
             <Slider />
             <BasicInformations />
-            <Appointment />
+            <Appointment route='home' />
             <AboutMe subtitle={true} />
             <ServicesShortcuts />
             <Comments />

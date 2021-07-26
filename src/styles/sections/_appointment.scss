@@ -6,9 +6,20 @@
     background-image: url("../assets/images/background.jpg");
     background-size: cover;
 
-    @media (min-width: 992px) {
-        flex-direction: row;
-        justify-content: space-evenly;
+    &--home {
+        @media (min-width: 992px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    &--contact {
+        margin-top: 5%;
+
+        @media (min-width: 992px) {
+            padding: 5% 0;
+            margin-top: 0;
+        }
     }
 
     &__title {
@@ -16,10 +27,11 @@
         margin-bottom: 4rem;
         font-size: 2.6rem;
         text-align: center;
-        text-transform: uppercase;
 
-        @media (min-width: 992px) {
-            margin-bottom: 0;
+        &--home {
+            @media (min-width: 992px) {
+                margin-bottom: 0;
+            }
         }
 
         @media (min-width: 992px) {
@@ -30,5 +42,13 @@
     &__pin {
         min-width: 1.2rem;
         min-height: 1.2rem;
+    }
+
+    &__description {
+        padding: 0 5%;
+        color: #fff;
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 2.5rem;
     }
 }

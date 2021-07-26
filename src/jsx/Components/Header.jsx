@@ -13,7 +13,7 @@ const Header = ({ route }) => {
                 </Link>
                 <Menu route={route} />
             </div>
-            <InfoShortcuts />
+            {route !== 'contact' ? <InfoShortcuts /> : null}
         </header>
     )
 }
