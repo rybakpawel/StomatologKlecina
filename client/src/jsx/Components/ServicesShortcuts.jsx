@@ -10,26 +10,45 @@ const ServicesShortcuts = () => {
     const btn = 'Pełny opis usług'
     const services = [
         {
+            id: 1,
             title: 'Opieka w nagłych wypadkach',
             description: 'Nie wahaj się skontaktować w nagłych wypadkach. Pilna opieka stomatologiczna świadczona jest zwykle tego samego dnia.',
             icon: firstAid,
         },
         {
+            id: 2,
             title: 'Leczenie zachowawcze zębów',
             description: 'Leczenie próchnicy, leczenie kanałowe, usuwanie starych wkładów koronowo-korzeniowych, profilaktyka zębów, usuwanie zębów.',
             icon: dentalCare,
         },
         {
+            id: 3,
             title: 'Stomatologia dziecięca',
             description: 'Leczenie i usuwanie zębów mlecznych, impregnacja zębów mlecznych, lakowanie i lakierowanie zębów mlecznych i stałych, fluorkowanie zębów.',
             icon: baby,
         },
         {
+            id: 4,
             title: 'Kosmetyka stomatologiczna',
             description: 'Licówki pełnoceramiczne, korony pełnoceramiczne, korekta kształtu zębów, zmiana koloru lub maskowanie przebarwień.',
             icon: tooth,
         },
     ]
+
+    const cards = services.map(service => {
+        const { icon, title, description, id } = service
+
+        return (
+            <Card
+                icon={icon}
+                title={title}
+                description={description}
+                button={btn}
+                link='/services'
+                key={id}
+            />
+        )
+    })
 
     return (
         <section className='servicesShortcuts'>
@@ -38,36 +57,8 @@ const ServicesShortcuts = () => {
                 <Line center={true} />
             </h2>
             <div className='servicesShortcuts__shortcuts'>
-                <Card
-                    icon={services[0].icon}
-                    title={services[0].title}
-                    description={services[0].description}
-                    button={btn}
-                    link='/services'
-                />
-                <Card
-                    icon={services[1].icon}
-                    title={services[1].title}
-                    description={services[1].description}
-                    button={btn}
-                    link='/services'
-                />
-                <Card
-                    icon={services[2].icon}
-                    title={services[2].title}
-                    description={services[2].description}
-                    button={btn}
-                    link='/services'
-                />
-                <Card
-                    icon={services[3].icon}
-                    title={services[3].title}
-                    description={services[3].description}
-                    button={btn}
-                    link='/services'
-                />
+                {cards}
             </div>
-
         </section>
     )
 }

@@ -2,12 +2,16 @@
 ##### URL: http://www.stomatologklecina.pl
 
 ## Technologies, methodologies, libraries etc.
-###### React.js
-###### React Router
-###### React Device Detect
-###### SCSS
-###### BEM
-###### Swiper
-###### Flaticon
+ - Front-end
+  - React.js
+  - React Router
+  - React Device Detect
+  - SCSS
+  - BEM
+  - Swiper
+  - Flaticon
+ - Back-end
+  - Express.js
+  - Nodemon
 
 

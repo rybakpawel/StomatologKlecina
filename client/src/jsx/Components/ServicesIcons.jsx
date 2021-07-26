@@ -52,33 +52,26 @@ const ServicesIcons = () => {
         },
     ]
 
-    const getServices = () => {
-        const items = servicesList.map(item => {
-            return (
-                <div
-                    className='services-icons__wrapper'
-                    key={item.id}>
-                    <div className='services-icons__circle'>
-                        <img
-                            src={item.icon}
-                            alt={item.title}
-                            className='services-icons__image' />
-                    </div>
-                    <h2 className='services-icons__title'>{item.title}</h2>
-                </div>
-            )
-        })
-
+    const servicesIcons = servicesList.map(item => {
         return (
-            <>
-                {items}
-            </>
+            <div
+                className='services-icons__wrapper'
+                key={item.id}>
+                <div className='services-icons__circle'>
+                    <img
+                        src={item.icon}
+                        alt={item.title}
+                        className='services-icons__image' />
+                </div>
+                <h2 className='services-icons__title'>{item.title}</h2>
+            </div>
         )
-    }
+    })
+
 
     return (
         <section className="services-icons">
-            {getServices()}
+            {servicesIcons}
         </section>
     )
 }

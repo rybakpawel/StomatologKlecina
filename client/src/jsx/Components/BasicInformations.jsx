@@ -8,45 +8,47 @@ import tools from '../../assets/icons/tools.svg'
 const BasicInformations = () => {
     const informations = [
         {
+            id: 1,
             title: 'Lek. Magdalena Chorążykiewicz',
             description: 'Specjalista stomatologii zachowawczej z 20 letnim doświadczeniem',
             icon: dentist
         },
         {
+            id: 2,
             title: 'Usługi',
             description: 'Oferujemy Państwu szeroki zakres usług stomatologicznych w najwyższym standardzie',
             icon: tools
         },
         {
+            id: 3,
             title: 'Nowoczesny gabinet',
             description: 'Zapraszam do mojego gabinetu mieszczącego się przy ul. Kostrzyńskiej 26',
             icon: office
         },
         {
+            id: 4,
             title: 'Darmowa wizyta kontrolna',
             description: 'Skorzystaj z pierwszej darmowej wizyty kontrolnej, podczas której sprawdzę stan zdrowia twojego uzębienia i zdecyduję o dalszym leczeniu',
             icon: magnifier
         },
     ]
 
+    const cards = informations.map(service => {
+        const { icon, title, description, id } = service
+
+        return (
+            <Card
+                icon={icon}
+                title={title}
+                description={description}
+                key={id}
+            />
+        )
+    })
+
     return (
         <section className='basic-informations'>
-            <Card
-                icon={informations[0].icon}
-                title={informations[0].title}
-                description={informations[0].description} />
-            <Card
-                icon={informations[1].icon}
-                title={informations[1].title}
-                description={informations[1].description} />
-            <Card
-                icon={informations[2].icon}
-                title={informations[2].title}
-                description={informations[2].description} />
-            <Card
-                icon={informations[3].icon}
-                title={informations[3].title}
-                description={informations[3].description} />
+            {cards}
         </section>
     )
 }
