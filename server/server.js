@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 const home = require('./routes/home')
+const aboutMe = require('./routes/aboutme')
+const services = require('./routes/services')
+const contact = require('./routes/contact')
 
 const PORT = process.env.PORT || 3080
 dotenv.config();
@@ -16,3 +19,6 @@ app.listen(process.env.PORT, () => {
 mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlParser: true }, () => console.log('Connected with mongoose'));
 
 app.use('/home', home)
+app.use('/aboutme', aboutMe)
+app.use('/services', services)
+app.use('/contact', contact)
