@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const dotenv = require('dotenv');
 
 const home = require('./routes/home')
@@ -17,6 +18,10 @@ app.listen(process.env.PORT, () => {
 })
 
 mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlParser: true }, () => console.log('Connected with mongoose'));
+
+app.use(cors({
+    origin: 'http://localhost:3000'
+}))
 
 app.use('/home', home)
 app.use('/aboutme', aboutMe)

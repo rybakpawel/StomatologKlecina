@@ -5,6 +5,7 @@ const getAllServicesList = async () => {
         const services = await Service.find({}, (err) => {
             if (err) console.log(`'Services' not found.`)
         })
+        
         return await services
 
     } catch {
@@ -14,7 +15,8 @@ const getAllServicesList = async () => {
 
 const getShortServicesList = async () => {
     try {
-        const services = await Service.find({}, (err) => {
+        const services = await Service.find({
+            "details": {$ne: null}}, (err) => {
             if (err) console.log(`'Services' not found.`)
         })
         return await services
