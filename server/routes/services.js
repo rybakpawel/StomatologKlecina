@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { getAllServicesList, getShortServicesList } = require('../controllers/services'); 
+const { getWholeServicesList, getShortServicesList } = require('../controllers/services'); 
 
 const getData = async () => {
     try {                                               
-        const allServicesList = await getAllServicesList()
+        const wholeServicesList = await getWholeServicesList()
         const shortServicesList = await getShortServicesList()
  
-        module.exports.allServicesList = allServicesList
+        module.exports.wholeServicesList = wholeServicesList
         module.exports.shortServicesList = shortServicesList
 
     } catch {
@@ -18,7 +18,7 @@ getData();
 
 router.get('/', (req, res) => {
     res.send({
-        allServicesList: router.allServicesList,
+        wholeServicesList: router.wholeServicesList,
         shortServicesList: router.shortServicesList
     })
 })

@@ -1,6 +1,6 @@
 const Service = require('../models/Service');
 
-const getAllServicesList = async () => {
+const getWholeServicesList = async () => {
     try {
         const services = await Service.find({}, (err) => {
             if (err) console.log(`'Services' not found.`)
@@ -27,6 +27,6 @@ const getShortServicesList = async () => {
 }
 
 module.exports =  {
-    getAllServicesList,
+    getWholeServicesList,
     getShortServicesList
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import dentalCareIcon from '../../assets/icons/dentalCare.svg'
 import teethIcon from '../../assets/icons/teeth.svg'
 import babyIcon from '../../assets/icons/baby.svg'
@@ -9,7 +9,19 @@ import orthopantomogramIcon from '../../assets/icons/orthopantomogram.svg'
 import magnifierIcon from '../../assets/icons/magnifier.svg'
 
 const ServicesIcons = () => {
-    const servicesList = [
+    const [servicesList, setServicesList] = useState(null)
+
+    useEffect(() => {
+        loadData();
+    }, [])
+
+    const loadData = async () => {
+        const response = await fetch('http://localhost:3080/services')
+        const data = await response.json()
+        setServicesList(data.wholeServicesList)
+    }
+
+    const icons = [
         {
             id: 1,
             icon: dentalCareIcon,
@@ -52,26 +64,35 @@ const ServicesIcons = () => {
         },
     ]
 
-    const servicesIcons = servicesList.map(item => {
-        return (
-            <div
-                className='services-icons__wrapper'
-                key={item.id}>
-                <div className='services-icons__circle'>
-                    <img
-                        src={item.icon}
-                        alt={item.title}
-                        className='services-icons__image' />
-                </div>
-                <h2 className='services-icons__title'>{item.title}</h2>
-            </div>
-        )
-    })
+    const mapList = () => {
+        const servicesIcons = servicesList.map(item => {
+            const { id, title } = item
 
+            const properIcon = icons.find(icon => {
+                return icon.id === id
+            })
+
+            return (
+                <div
+                    className='services-icons__wrapper'
+                    key={id}>
+                    <div className='services-icons__circle'>
+                        <img
+                            src={properIcon.icon}
+                            alt={title}
+                            className='services-icons__image' />
+                    </div>
+                    <h2 className='services-icons__title'>{title}</h2>
+                </div>
+            )
+        })
+
+        return servicesIcons
+    }
 
     return (
-        <section className="services-icons">
-            {servicesIcons}
+        <section className='services-icons'>
+            {servicesList ? mapList() : null}
         </section>
     )
 }
