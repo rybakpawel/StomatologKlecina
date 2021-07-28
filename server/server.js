@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
-const home = require('./routes/home')
+const comments = require('./routes/comments')
 const aboutMe = require('./routes/aboutme')
 const services = require('./routes/services')
 const contact = require('./routes/contact')
@@ -23,7 +23,7 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }))
 
-app.use('/home', home)
+app.use('/comments', comments)
 app.use('/aboutme', aboutMe)
 app.use('/services', services)
 app.use('/contact', contact)

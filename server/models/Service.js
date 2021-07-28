@@ -6,4 +6,4 @@ const serviceSchema = new mongoose.Schema({
     details: [String],
 }, { collection: 'services'});
 
-module.exports = mongoose.model('Services', serviceSchema);
+module.exports = mongoose.model('Service', serviceSchema);
