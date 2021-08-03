@@ -1,10 +1,14 @@
 const Service = require('../models/Service');
 
-const getWholeServicesList = async () => {
+const compareID = (a, b) => {
+    return a.id - b.id;
+}
+
+const getEightServicesList = async () => {
     try {
         const services = await Service.find({}, (err) => {
             if (err) console.log(`'Services' not found.`)
-        })
+        }).limit(8)
         
         return await services
 
@@ -13,7 +17,7 @@ const getWholeServicesList = async () => {
     }
 }
 
-const getShortServicesList = async () => {
+const getWithoutDetailsServicesList = async () => {
     try {
         const services = await Service.find({
             "details": {$ne: null}}, (err) => {
@@ -26,7 +30,23 @@ const getShortServicesList = async () => {
     }
 }
 
+const getServicesListWithDescriptions = async () => {
+    try {
+        const services = await Service.find({
+            "description": {$ne: null}}, (err) => {
+            if (err) console.log(`'Services' not found.`)
+        })
+
+        const sortedServices = services.sort(compareID)
+
+        return await sortedServices
+    } catch {
+        console.log('Error (service)')
+    }
+}
+
 module.exports =  {
-    getWholeServicesList,
-    getShortServicesList
+    getEightServicesList,
+    getWithoutDetailsServicesList,
+    getServicesListWithDescriptions
 }

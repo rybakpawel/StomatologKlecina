@@ -24,16 +24,14 @@ const Comments = ({ title, icon, line, dots, background }) => {
 
     SwiperCore.use([Autoplay, Pagination]);
 
-    const mapList = () => {
+    const mapCommentsList = () => {
         const commentsList = comments.map(item => {
 
             const { id, comment, name } = item
 
             return (
-                <SwiperSlide>
-                    <div className='comments__wrapper'
-                        key={id}>
-
+                <SwiperSlide key={id}>
+                    <div className='comments__wrapper'>
                         {icon ? <img className='comments__avatar' src={avatar} alt='avatar' /> : null}
                         {line ? <Line /> : null}
                         <p className={`comments__comment ${background === 'pink' ? 'comments__comment--pink' : ''}`}>{comment}</p>
@@ -67,7 +65,7 @@ const Comments = ({ title, icon, line, dots, background }) => {
                     }}
                     pagination={dots ? { "clickable": true } : false}
                     className="mySwiper">
-                    {comments ? mapList() : null}
+                    {comments ? mapCommentsList() : null}
                 </Swiper>
             </section>
             {line ? <Line allOver={true} /> : null}

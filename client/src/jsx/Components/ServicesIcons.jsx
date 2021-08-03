@@ -18,53 +18,45 @@ const ServicesIcons = () => {
     const loadData = async () => {
         const response = await fetch('http://localhost:3080/services')
         const data = await response.json()
-        setServicesList(data.wholeServicesList)
+        setServicesList(data.eightServicesList)
     }
 
     const icons = [
         {
-            id: 1,
-            icon: dentalCareIcon,
-            title: 'Leczenie zachowawcze zębów'
-        },
-        {
             id: 2,
-            icon: teethIcon,
-            title: 'Protetyka'
+            icon: dentalCareIcon,
         },
         {
             id: 3,
-            icon: babyIcon,
-            title: 'Stomatologia dziecięca'
+            icon: teethIcon,
         },
         {
             id: 4,
-            icon: toothPilersIcon,
-            title: 'Chirurgia'
+            icon: babyIcon,
         },
         {
             id: 5,
-            icon: painIcon,
-            title: 'Periodontologia'
+            icon: toothPilersIcon,
         },
         {
             id: 6,
-            icon: toothIcon,
-            title: 'Kosmetyka stomatologiczna'
+            icon: painIcon,
         },
         {
             id: 7,
-            icon: orthopantomogramIcon,
-            title: 'Radiowizjografia'
+            icon: toothIcon,
         },
         {
             id: 8,
+            icon: orthopantomogramIcon,
+        },
+        {
+            id: 9,
             icon: magnifierIcon,
-            title: 'Wybielanie zębów'
         },
     ]
 
-    const mapList = () => {
+    const mapIconList = () => {
         const servicesIcons = servicesList.map(item => {
             const { id, title } = item
 
@@ -92,7 +84,7 @@ const ServicesIcons = () => {
 
     return (
         <section className='services-icons'>
-            {servicesList ? mapList() : null}
+            {servicesList ? mapIconList() : null}
         </section>
     )
 }

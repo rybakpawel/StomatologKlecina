@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Line from './Line'
 import firstAid from '../../assets/icons/firstAid.svg'
@@ -7,48 +7,59 @@ import baby from '../../assets/icons/baby.svg'
 import tooth from '../../assets/icons/tooth.svg'
 
 const ServicesShortcuts = () => {
-    const btn = 'Pełny opis usług'
-    const services = [
+    const [servicesShortcutsList, setServicesShortcutsList] = useState(null)
+
+    useEffect(() => {
+        loadData();
+    }, [])
+
+    const loadData = async () => {
+        const response = await fetch('http://localhost:3080/services')
+        const data = await response.json()
+        setServicesShortcutsList(data.servicesListWithDescriptions)
+    }
+
+    const buttonDescription = 'Pełny opis usług'
+    const icons = [
         {
             id: 1,
-            title: 'Opieka w nagłych wypadkach',
-            description: 'Nie wahaj się skontaktować w nagłych wypadkach. Pilna opieka stomatologiczna świadczona jest zwykle tego samego dnia.',
             icon: firstAid,
         },
         {
             id: 2,
-            title: 'Leczenie zachowawcze zębów',
-            description: 'Leczenie próchnicy, leczenie kanałowe, usuwanie starych wkładów koronowo-korzeniowych, profilaktyka zębów, usuwanie zębów.',
             icon: dentalCare,
         },
         {
-            id: 3,
-            title: 'Stomatologia dziecięca',
-            description: 'Leczenie i usuwanie zębów mlecznych, impregnacja zębów mlecznych, lakowanie i lakierowanie zębów mlecznych i stałych, fluorkowanie zębów.',
+            id: 4,
             icon: baby,
         },
         {
-            id: 4,
-            title: 'Kosmetyka stomatologiczna',
-            description: 'Licówki pełnoceramiczne, korony pełnoceramiczne, korekta kształtu zębów, zmiana koloru lub maskowanie przebarwień.',
+            id: 7,
             icon: tooth,
         },
     ]
 
-    const cards = services.map(service => {
-        const { icon, title, description, id } = service
+    const mapServiceShortcutsList = () => {
+        const cards = servicesShortcutsList.map(service => {
+            const { title, description, id } = service
 
-        return (
-            <Card
-                icon={icon}
-                title={title}
-                description={description}
-                button={btn}
-                link='/services'
-                key={id}
-            />
-        )
-    })
+            const properIcon = icons.find(icon => {
+                return icon.id === id
+            })
+
+            return (
+                <Card
+                    icon={properIcon.icon}
+                    title={title}
+                    description={description}
+                    button={buttonDescription}
+                    link='/services'
+                    key={id}
+                />
+            )
+        })
+        return cards
+    }
 
     return (
         <section className='servicesShortcuts'>
@@ -57,7 +68,7 @@ const ServicesShortcuts = () => {
                 <Line center={true} />
             </h2>
             <div className='servicesShortcuts__shortcuts'>
-                {cards}
+                {servicesShortcutsList ? mapServiceShortcutsList() : null}
             </div>
         </section>
     )

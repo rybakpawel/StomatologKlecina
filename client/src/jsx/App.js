@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import WidthContext from './context/widthContext'
 import getWidth from './utils/orientation'
+import ScrollToTop from './utils/ScrollToTop'
 import '../styles/style.css'
 import HomePage from './pages/HomePage'
 import AboutMePage from './pages/AboutMePage'
@@ -25,12 +26,13 @@ function App() {
     <>
       <WidthContext.Provider value={{width}}>
         <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/aboutme" exact component={AboutMePage} />
-            <Route path="/services" exact component={ServicesPage} />
-            <Route path="/contact" exact component={ContactPage} />
-          </Switch>
+          <ScrollToTop />
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/aboutme" exact component={AboutMePage} />
+              <Route path="/services" exact component={ServicesPage} />
+              <Route path="/contact" exact component={ContactPage} />
+            </Switch>
         </BrowserRouter>
       </WidthContext.Provider>
     </>

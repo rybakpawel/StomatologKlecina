@@ -10,10 +10,10 @@ const ServicesDetails = () => {
     const loadData = async () => {
         const response = await fetch('http://localhost:3080/services')
         const data = await response.json()
-        setServicesList(data.shortServicesList)
+        setServicesList(data.withoutDetailsServicesList)
     }
 
-    const mapList = () => {
+    const mapServiceList = () => {
         const serviceList = servicesList.map(item => {
 
             const { id, title, details } = item
@@ -42,7 +42,7 @@ const ServicesDetails = () => {
 
     return (
         <section className='services-details'>
-            {servicesList ? mapList() : null}
+            {servicesList ? mapServiceList() : null}
         </section>
     )
 }
