@@ -11,7 +11,7 @@ const Appointment = ({ route }) => {
             case 'home':
                 return (
                     <div>
-                        <Link to='/'>
+                        <Link to={{ pathname: 'https://www.znanylekarz.pl/magdalena-chorazykiewicz/stomatolog/wroclaw' }} target='_blank'>
                             <Button variant='border-white' title='Mój profil na Znany Lekarz' />
                             <Button variant='border-white' title={whitePin} padding={{ padding: '1rem 1.4rem' }} />
                         </Link>

@@ -15,7 +15,7 @@ const Comments = ({ title, icon, line, dots, background }) => {
     }, [])
 
     const loadData = async () => {
-        const response = await fetch('http://localhost:3080/comments')
+        const response = await fetch('https://stomatolog-klecina.herokuapp.com/comments')
         const data = await response.json()
         setComments(data.comments)
     }

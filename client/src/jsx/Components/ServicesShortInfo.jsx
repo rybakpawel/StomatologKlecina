@@ -12,7 +12,7 @@ const ServicesShortInfo = () => {
             <div className='services-short-info__wrapper'>
                 <h1 className='services-short-info__title'>Usługi</h1>
                 <p className='services-short-info__description'>Oferujemy Państwu szeroki zakres usług stomatologicznych w najwyższym standardzie - w tym leczenie kanałowe (endodoncja), protetykę (licówki, protezy), szeroki wachlarz usług z zakresu kosmetyki stomatologicznej. Poniżej znajduję się bardziej szczegółowa lista.</p>
-                <Link to='/'>
+                <Link to={{ pathname: 'https://www.znanylekarz.pl/magdalena-chorazykiewicz/stomatolog/wroclaw' }} target='_blank'>
                     <Button variant='border-white' title='Kalendarz' />
                 </Link>
             </div>

@@ -14,7 +14,7 @@ const ServicesShortcuts = () => {
     }, [])
 
     const loadData = async () => {
-        const response = await fetch('http://localhost:3080/services')
+        const response = await fetch('https://stomatolog-klecina.herokuapp.com/services')
         const data = await response.json()
         setServicesShortcutsList(data.servicesListWithDescriptions)
     }
