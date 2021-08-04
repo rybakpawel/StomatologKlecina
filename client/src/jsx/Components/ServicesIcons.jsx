@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loader from './Loader'
 import dentalCareIcon from '../../assets/icons/dentalCare.svg'
 import teethIcon from '../../assets/icons/teeth.svg'
 import babyIcon from '../../assets/icons/baby.svg'
@@ -84,7 +85,7 @@ const ServicesIcons = () => {
 
     return (
         <section className='services-icons'>
-            {servicesList ? mapIconList() : null}
+            {servicesList ? mapIconList() : <Loader />}
         </section>
     )
 }

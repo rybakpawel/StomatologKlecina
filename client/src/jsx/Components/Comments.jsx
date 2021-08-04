@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Line from './Line';
+import Loader from './Loader';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination } from 'swiper/core';
 import "swiper/swiper.min.css";
@@ -56,17 +57,20 @@ const Comments = ({ title, icon, line, dots, background }) => {
                     null
                 }
 
-                <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    autoplay={{
-                        "delay": 2500,
-                        "disableOnInteraction": false
-                    }}
-                    pagination={dots ? { "clickable": true } : false}
-                    className="mySwiper">
-                    {comments ? mapCommentsList() : null}
-                </Swiper>
+                {comments ?
+                    <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                            "delay": 2500,
+                            "disableOnInteraction": false
+                        }}
+                        pagination={dots ? { "clickable": true } : false}
+                        className="mySwiper">
+                        {mapCommentsList()}
+                    </Swiper>
+                    : <Loader />
+                }
             </section>
             {line ? <Line allOver={true} /> : null}
         </>

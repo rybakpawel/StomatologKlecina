@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loader from './Loader'
 
 const ServicesDetails = () => {
     const [servicesList, setServicesList] = useState(null)
@@ -42,7 +43,7 @@ const ServicesDetails = () => {
 
     return (
         <section className='services-details'>
-            {servicesList ? mapServiceList() : null}
+            {servicesList ? mapServiceList() : <Loader color='white' />}
         </section>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import Line from './Line'
+import Loader from './Loader'
 import firstAid from '../../assets/icons/firstAid.svg'
 import dentalCare from '../../assets/icons/dentalCare.svg'
 import baby from '../../assets/icons/baby.svg'
@@ -68,7 +69,7 @@ const ServicesShortcuts = () => {
                 <Line center={true} />
             </h2>
             <div className='servicesShortcuts__shortcuts'>
-                {servicesShortcutsList ? mapServiceShortcutsList() : null}
+                {servicesShortcutsList ? mapServiceShortcutsList() : <Loader />}
             </div>
         </section>
     )
