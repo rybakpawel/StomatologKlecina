@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import WidthContext from './context/widthContext'
+import WidthContext from './context/dimensionContext'
+import DimensionContext from './context/dimensionContext'
 import getWidth from './utils/orientation'
+import getDimension from './utils/orientation'
 import ScrollToTop from './utils/ScrollToTop'
 import '../styles/style.css'
 import HomePage from './pages/HomePage'
@@ -11,20 +13,31 @@ import ContactPage from './pages/ContactPage'
 
 
 function App() {
-  const [width, setWidth] = useState(getWidth());
+  const [dimension, setDimenion] = useState(getDimension());
 
-  const handleWidth = () => {
-      setWidth(getWidth());
+  const handleDimension = () => {
+      setDimenion(getDimension());
   };
 
   useEffect(() => {
-      window.addEventListener('resize', handleWidth);
-      return () => window.removeEventListener('resize', handleWidth);
+      window.addEventListener('resize', handleDimension);
+      return () => window.removeEventListener('resize', handleDimension);
   }, []);
+  // const [width, setWidth] = useState(getWidth());
+
+  // const handleWidth = () => {
+  //     setWidth(getWidth());
+  // };
+
+  // useEffect(() => {
+  //     window.addEventListener('resize', handleWidth);
+  //     return () => window.removeEventListener('resize', handleWidth);
+  // }, []);
 
   return (
     <>
-      <WidthContext.Provider value={{width}}>
+      {/* <WidthContext.Provider value={{width}}> */}
+      <DimensionContext.Provider value={{dimension}}>
         <BrowserRouter>
           <ScrollToTop />
             <Switch>
@@ -34,7 +47,8 @@ function App() {
               <Route path="/contact" exact component={ContactPage} />
             </Switch>
         </BrowserRouter>
-      </WidthContext.Provider>
+      </DimensionContext.Provider>
+      {/* </WidthContext.Provider> */}
     </>
   );
 }

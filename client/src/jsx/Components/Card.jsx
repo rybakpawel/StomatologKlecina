@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { isMobile } from 'react-device-detect'
-import WidthContext from '../context/widthContext'
+import DimensionContext from '../context/dimensionContext'
 import Button from './Button'
 
 const Card = ({ icon, title, description, button, link }) => {
-    const { width } = useContext(WidthContext)
+    const { dimension } = useContext(DimensionContext)
+    const { width } = dimension
 
     const [isShort, setIsShort] = useState(!isMobile)
     const handleCardsAnimation = () => {

@@ -1,6 +1,10 @@
-const getWidth = () => {
+const getDimension = () => {
     const width = window.innerWidth;
-    return width;
+    const height = window.innerHeight;
+    return {
+        width,
+        height
+    }
 }
 
-export default getWidth;
+export default getDimension

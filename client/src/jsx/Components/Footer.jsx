@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
+import DimensionContext from '../context/dimensionContext'
 import Button from './Button';
 import infoImage from '../../assets/images/info.jpg';
 
 const Footer = () => {
-    const [height, setHeight] = useState(null)
+    // const { dimension } = useContext(DimensionContext)
+    // const { height } = dimension
 
+    const [height, setHeight] = useState(0)
     const footerRef = useRef(null)
 
     useEffect(() => {
@@ -16,10 +19,15 @@ const Footer = () => {
     return (
         <>
             <div className='footerWrapper' style={{ height: `${height}px` }}></div>
-            <section ref={footerRef} className='footer'>
+            <section className='footer'
+                ref={footerRef}>
                 <div className='footer__card'>
-                    <img className='footer__card__image' src={infoImage} alt='info' />
-                    <p className='footer__card__description'>Zapraszamy do skorzystania z najwyższej jakości usług stomatologicznych z zakresu leczenia zachowawczego (w tym leczenia kanałowego), protetyki i stomatologii kosmetycznej (m.in. licówki). Rejestracja codziennie pod numerem telefonu 603-068-648.</p>
+                    <img className='footer__card__image'
+                        src={infoImage}
+                        alt='info' />
+                    <p className='footer__card__description'>
+                        Zapraszamy do skorzystania z najwyższej jakości usług stomatologicznych z zakresu leczenia zachowawczego (w tym leczenia kanałowego), protetyki i stomatologii kosmetycznej (m.in. licówki). Rejestracja codziennie pod numerem telefonu 603-068-648.
+                    </p>
                     <Button variant='full' title='Znany lekarz' font={{ fontSize: '1.4rem' }} />
                 </div>
                 <div className='footer__lists-container'>

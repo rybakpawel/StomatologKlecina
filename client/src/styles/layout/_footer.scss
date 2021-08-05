@@ -1,11 +1,11 @@
 .footerWrapper {
     background: transparent;
-    overflow-y: scroll;
 }
 
 .footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     padding: 10%;
@@ -13,16 +13,32 @@
     transform: translateY(20px);
     color: #fff;
     z-index: -10;
-    overflow-y: scroll;
 
     &__card {
         display: flex;
         flex-direction: column;
 
+        &__image {
+            width: 90%;
+            margin: 0 auto;
+
+            @media (min-width: 500px) {
+                width: 80%;
+            }
+        }
+
         &__description {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             margin: 2rem 0;
             text-align: center;
+
+            @media (min-width: 500px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: 500px) {
+            width: 45%;
         }
     }
 
@@ -31,6 +47,12 @@
         justify-content: space-between;
         text-align: center;
         margin-top: 2rem;
+
+        &__menu {
+            ul {
+                text-transform: uppercase;
+            }
+        }
 
         &__title {
             margin-bottom: 0.8rem;
@@ -59,5 +81,24 @@
                 justify-content: space-between;
             }
         }
+
+        @media (min-width: 500px) {
+            width: 50%;
+
+            li {
+                padding: 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    @media (min-width: 1200px) {
+        margin: 0 20px;
+        padding: 10% 5%;
     }
 }

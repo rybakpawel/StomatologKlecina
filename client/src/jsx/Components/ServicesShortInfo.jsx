@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import WidthContext from '../context/widthContext'
+import DimensionContext from '../context/dimensionContext'
 import Button from './Button'
 import chair from '../../assets/images/chair2.jpg'
 
 const ServicesShortInfo = () => {
-    const { width } = useContext(WidthContext)
+    const { dimension } = useContext(DimensionContext)
+    const { width } = dimension
 
     return (
         <section className='services-short-info'>

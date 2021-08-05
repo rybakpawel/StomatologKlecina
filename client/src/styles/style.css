@@ -493,12 +493,12 @@ li {
 
 .footerWrapper {
   background: transparent;
-  overflow-y: scroll;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,7 +512,6 @@ li {
           transform: translateY(20px);
   color: #fff;
   z-index: -10;
-  overflow-y: scroll;
 }
 
 .footer__card {
@@ -525,10 +524,33 @@ li {
           flex-direction: column;
 }
 
+.footer__card__image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .footer__card__image {
+    width: 80%;
+  }
+}
+
 .footer__card__description {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
   text-align: center;
+}
+
+@media (min-width: 500px) {
+  .footer__card__description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .footer__card {
+    width: 45%;
+  }
 }
 
 .footer__lists-container {
@@ -540,6 +562,10 @@ li {
           justify-content: space-between;
   text-align: center;
   margin-top: 2rem;
+}
+
+.footer__lists-container__menu ul {
+  text-transform: uppercase;
 }
 
 .footer__lists-container__title {
@@ -574,6 +600,35 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 500px) {
+  .footer__lists-container {
+    width: 50%;
+  }
+  .footer__lists-container li {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    margin: 0 20px;
+    padding: 10% 5%;
+  }
 }
 
 .header {

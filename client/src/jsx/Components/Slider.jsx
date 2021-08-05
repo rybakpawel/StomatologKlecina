@@ -5,7 +5,7 @@ import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
-import WidthContext from '../context/widthContext'
+import DimensionContext from '../context/dimensionContext'
 import Button from './Button'
 import dentistTransparent from '../../assets/images/dentist_transparent.png'
 import chair from '../../assets/images/chair.jpg'
@@ -35,7 +35,8 @@ const Slider = () => {
 
     SwiperCore.use([Pagination, Navigation]);
 
-    const { width } = useContext(WidthContext)
+    const { dimension } = useContext(DimensionContext)
+    const { width } = dimension
 
     return (
         <div className='slider-wrapper'>
