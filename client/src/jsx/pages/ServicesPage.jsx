@@ -4,6 +4,7 @@ import ServicesShortInfo from '../components/ServicesShortInfo'
 import ServicesIcons from '../components/ServicesIcons'
 import ServicesDetails from '../components/ServicesDetails'
 import InfoShortcuts from '../components/InfoShortcuts'
+import Footer from '../components/Footer'
 
 const ServicesPage = () => {
     return (
@@ -13,6 +14,7 @@ const ServicesPage = () => {
             <ServicesIcons />
             <ServicesDetails />
             <InfoShortcuts />
+            <Footer />
         </>
     )
 }

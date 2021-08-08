@@ -18,6 +18,8 @@
 }
 
 @mixin basic-information($bgc: #fff, $bgi: none, $white-text: none, $text-align: left, $left-margin-image: none, $title-margin-bottom: 1rem) {
+    position: relative;
+    z-index: 1;
     $title-color: $darker-font;
     $description-color: $lighter-font;
     display: flex;

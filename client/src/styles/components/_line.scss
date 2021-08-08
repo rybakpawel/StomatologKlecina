@@ -1,4 +1,6 @@
 .line {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 25px;
     padding-top: 1rem;

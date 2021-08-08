@@ -243,6 +243,8 @@ li {
 }
 
 .info-shortcuts {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,6 +343,8 @@ li {
 }
 
 .line {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 25px;
   padding-top: 1rem;
@@ -511,7 +515,6 @@ li {
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   color: #fff;
-  z-index: -10;
 }
 
 .footer__card {
@@ -568,10 +571,24 @@ li {
   text-transform: uppercase;
 }
 
+.footer__lists-container__menu ul a {
+  text-decoration: none;
+}
+
+.footer__lists-container__menu ul a:visited {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .footer__lists-container__title {
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: normal;
+}
+
+@media (min-width: 992px) {
+  .footer__lists-container__title {
+    margin-bottom: 2rem;
+  }
 }
 
 .footer__lists-container__list {
@@ -579,7 +596,7 @@ li {
 }
 
 .footer__lists-container li {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   border-bottom: 1px rgba(255, 255, 255, 0.16) solid;
 }
 
@@ -607,7 +624,13 @@ li {
     width: 50%;
   }
   .footer__lists-container li {
-    padding: 1rem;
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__lists-container {
+    text-align: left;
   }
 }
 
@@ -624,14 +647,22 @@ li {
   }
 }
 
+@media (min-width: 992px) {
+  .footer {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
 @media (min-width: 1200px) {
   .footer {
     margin: 0 20px;
-    padding: 10% 5%;
   }
 }
 
 .header {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,6 +753,8 @@ li {
 }
 
 .about-me {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,6 +856,8 @@ li {
 }
 
 .appointment {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,6 +929,8 @@ li {
 }
 
 .basic-informations {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -924,6 +961,8 @@ li {
 }
 
 .comments {
+  position: relative;
+  z-index: 1;
   padding: 0 10%;
   background-color: #fff;
 }
@@ -984,6 +1023,8 @@ li {
 }
 
 .services-details {
+  position: relative;
+  z-index: 1;
   padding: 5%;
   background-color: #EA8F7C;
   color: #fff;
@@ -1021,6 +1062,8 @@ li {
 }
 
 .services-icons {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1083,6 +1126,8 @@ li {
 }
 
 .servicesShortcuts {
+  position: relative;
+  z-index: 1;
   padding: 5%;
   background-color: #fff;
 }
@@ -1132,6 +1177,8 @@ li {
 }
 
 .services-short-info {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

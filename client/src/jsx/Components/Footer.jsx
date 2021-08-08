@@ -1,24 +1,18 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
-import DimensionContext from '../context/dimensionContext'
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'
 import Button from './Button';
 import infoImage from '../../assets/images/info.jpg';
 
 const Footer = () => {
-    // const { dimension } = useContext(DimensionContext)
-    // const { height } = dimension
-
     const [height, setHeight] = useState(0)
     const footerRef = useRef(null)
 
     useEffect(() => {
-        setTimeout(() => {
-            setHeight(footerRef.current.clientHeight)
-        }, 500)
+        setHeight(footerRef.current.clientHeight)
     }, [])
 
     return (
         <>
-            <div className='footerWrapper' style={{ height: `${height}px` }}></div>
             <section className='footer'
                 ref={footerRef}>
                 <div className='footer__card'>
@@ -34,10 +28,26 @@ const Footer = () => {
                     <div className='footer__lists-container__menu'>
                         <h4 className='footer__lists-container__title'>Menu</h4>
                         <ul className='footer__lists-container__list'>
-                            <li>Strona główna</li>
-                            <li>O mnie</li>
-                            <li>Usługi</li>
-                            <li>Kontakt</li>
+                            <li>
+                                <Link to='/'>
+                                    Strona główna
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='aboutme'>
+                                    O mnie
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='services'>
+                                    Usługi
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='contact'>
+                                    Kontakt
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className='footer__lists-container__opening'>
@@ -75,6 +85,7 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
+            <div className='footerWrapper' style={{ height: `${height}px` }}></div>
         </>
     )
 }

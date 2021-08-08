@@ -1,4 +1,6 @@
 .services-details {
+    position: relative;
+    z-index: 1;
     padding: 5%;
     background-color: $base-color;
     color: #fff;

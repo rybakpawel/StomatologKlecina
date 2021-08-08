@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import AboutMe from '../components/AboutMe'
 import Comments from '../components/Comments'
 import InfoShortcuts from '../components/InfoShortcuts'
+import Footer from '../components/Footer'
 
 const AboutMePage = () => {
     return (
@@ -16,6 +17,7 @@ const AboutMePage = () => {
                 dots={false}
                 background='pink' />
             <InfoShortcuts />
+            <Footer />
         </>
     )
 }

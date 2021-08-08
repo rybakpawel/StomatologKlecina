@@ -12,7 +12,6 @@
     background-color: #003647;
     transform: translateY(20px);
     color: #fff;
-    z-index: -10;
 
     &__card {
         display: flex;
@@ -51,6 +50,14 @@
         &__menu {
             ul {
                 text-transform: uppercase;
+
+                a {
+                    text-decoration: none;
+
+                    &:visited {
+                        color: rgba(255, 255, 255, 0.8)
+                    }
+                }
             }
         }
 
@@ -58,6 +65,10 @@
             margin-bottom: 0.8rem;
             font-size: 1.4rem;
             font-weight: normal;
+
+            @media (min-width: 992px) {
+                margin-bottom: 2rem;
+            }
         }
 
         &__list {
@@ -65,7 +76,7 @@
         }
 
         li {
-            padding: 0.5rem;
+            padding: 0.5rem 0;
             border-bottom: 1px rgba($color: #fff, $alpha: .16) solid;
         }
 
@@ -86,8 +97,12 @@
             width: 50%;
 
             li {
-                padding: 1rem;
+                padding: 1rem 0;
             }
+        }
+
+        @media (min-width: 768px) {
+            text-align: left;
         }
     }
 
@@ -97,8 +112,11 @@
         padding: 5%;
     }
 
+    @media (min-width: 992px) {
+        transform: translateY(-20px);
+    }
+
     @media (min-width: 1200px) {
         margin: 0 20px;
-        padding: 10% 5%;
     }
 }
