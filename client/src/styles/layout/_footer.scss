@@ -62,12 +62,25 @@
         }
 
         &__title {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             font-size: 1.4rem;
             font-weight: normal;
+        }
 
-            @media (min-width: 992px) {
-                margin-bottom: 2rem;
+        .footer-line {
+            display: flex;
+            height: 1.5px;
+            margin-bottom: 1rem;
+
+            &__first-line {
+                flex-basis: 2rem;
+                background-color: $base-color;
+            }
+
+            &__second-line {
+                flex-basis: 100%;
+                margin-left: 1rem;
+                background-color: rgba(255, 255, 255, 0.16);
             }
         }
 

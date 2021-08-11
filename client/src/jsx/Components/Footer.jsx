@@ -8,7 +8,9 @@ const Footer = () => {
     const footerRef = useRef(null)
 
     useEffect(() => {
-        setHeight(footerRef.current.clientHeight)
+        if (footerRef.current) {
+            setHeight(footerRef.current.clientHeight)
+        }
     }, [])
 
     return (
@@ -27,6 +29,10 @@ const Footer = () => {
                 <div className='footer__lists-container'>
                     <div className='footer__lists-container__menu'>
                         <h4 className='footer__lists-container__title'>Menu</h4>
+                        <div className='footer-line'>
+                            <div className='footer-line__first-line'></div>
+                            <div className='footer-line__second-line'></div>
+                        </div>
                         <ul className='footer__lists-container__list'>
                             <li>
                                 <Link to='/'>
@@ -52,6 +58,10 @@ const Footer = () => {
                     </div>
                     <div className='footer__lists-container__opening'>
                         <h4 className='footer__lists-container__title'>Godziny otwarcia</h4>
+                        <div className='footer-line'>
+                            <div className='footer-line__first-line'></div>
+                            <div className='footer-line__second-line'></div>
+                        </div>
                         <ul className='footer__lists-container__list'>
                             <li>
                                 <span>Poniedziałek</span>

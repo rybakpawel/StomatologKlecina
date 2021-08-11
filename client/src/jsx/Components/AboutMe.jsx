@@ -21,7 +21,7 @@ const AboutMe = ({ subtitle }) => {
                     </h4>
                     : null}
                 <h2 className={`about-me__title ${alternate}`}>Lek. Magdalena Chorążykiewicz</h2>
-                <p className='about-me__description'>Nazywam się Magdalena Chorążykiewicz i prowadzę Indywidualną Praktykę Stomatologiczną. Studia ukończyłam na Wydziale Lekarsko-Stomatologicznym Akademii Medycznej we Wrocławiu. Od niemal 20. lat zajmuję się dbaniem o zdrowie zębów swoich pacjentów. Posiadam II stopień specjalizacji w zakresie stomatologii zachowawczej. Dzięki ustawicznemu kształceniu i nowoczesnemu sprzętowi oferuję Państwu leczenie na najwyższym poziomie.</p>
+                <p className='about-me__description'>Nazywam się Magdalena Chorążykiewicz i prowadzę Indywidualną Praktykę Stomatologiczną. Studia ukończyłam na Wydziale Lekarsko-Stomatologicznym Akademii Medycznej we Wrocławiu. Od kilkudziesięciu lat zajmuję się dbaniem o zdrowie zębów swoich pacjentów. Posiadam II stopień specjalizacji w zakresie stomatologii zachowawczej. Dzięki ustawicznemu kształceniu i nowoczesnemu sprzętowi oferuję Państwu leczenie na najwyższym poziomie.</p>
             </div>
         </section>
     )

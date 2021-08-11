@@ -35,7 +35,9 @@ const InfoShortcuts = () => {
     const informationsContainer = informationsList.map(info => {
         const { id, icon, title, description } = info
         return (
-            <div className='info-shortcuts__icon-informations' key={id}>
+            <div
+                className='info-shortcuts__icon-informations'
+                key={id}>
                 <img className='info-shortcuts__icon-informations__icon'
                     src={icon}
                     alt={title}>

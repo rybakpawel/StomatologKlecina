@@ -27,7 +27,7 @@ const Slider = () => {
         },
         {
             title: 'Profesjonalna opieka',
-            description: 'Skorzystaj z profesjonalnej opieki lekarza stomatologii z 20 letnim doświadczeniem. Nasz gabinet wyposażny jest w nowoczesny sprzęt dentystyczny.',
+            description: 'Skorzystaj z profesjonalnej opieki lekarza stomatologii z wieloletnim doświadczeniem. Nasz gabinet wyposażny jest w nowoczesny sprzęt dentystyczny.',
             button: 'O mnie',
             image: dentistMagda
         },
