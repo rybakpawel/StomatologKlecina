@@ -1,5 +1,6 @@
 {
   "name": "stomatolog_klecina",
+  "homepage": "http://stomatologklecina.pl",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

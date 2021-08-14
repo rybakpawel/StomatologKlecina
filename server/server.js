@@ -18,7 +18,7 @@ app.listen(process.env.PORT, () => {
 mongoose.connect(process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlParser: true }, () => console.log('Connected with mongoose'));
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'http://stomatologklecina.pl'
 }))
 
 app.use('/comments', comments)

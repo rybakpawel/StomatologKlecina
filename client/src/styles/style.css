@@ -572,6 +572,7 @@ li {
 }
 
 .footer__lists-container__menu ul a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
 
@@ -685,7 +686,14 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 5%;
   background-color: #fff;
+}
+
+@media (min-width: 992px) {
+  .header {
+    padding-bottom: 0;
+  }
 }
 
 .header__wrapper {
@@ -898,10 +906,6 @@ li {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-}
-
-.appointment--contact {
-  margin-top: 5%;
 }
 
 @media (min-width: 992px) {
