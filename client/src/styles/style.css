@@ -527,6 +527,12 @@ li {
           flex-direction: column;
 }
 
+@media (min-width: 500px) {
+  .footer__card {
+    width: 45%;
+  }
+}
+
 .footer__card__image {
   width: 90%;
   margin: 0 auto;
@@ -550,10 +556,8 @@ li {
   }
 }
 
-@media (min-width: 500px) {
-  .footer__card {
-    width: 45%;
-  }
+.footer__card a {
+  text-align: center;
 }
 
 .footer__lists-container {

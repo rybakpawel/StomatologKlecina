@@ -17,6 +17,10 @@
         display: flex;
         flex-direction: column;
 
+        @media (min-width: 500px) {
+            width: 45%;
+        }
+
         &__image {
             width: 90%;
             margin: 0 auto;
@@ -36,8 +40,8 @@
             }
         }
 
-        @media (min-width: 500px) {
-            width: 45%;
+        a {
+            text-align: center;
         }
     }
 

@@ -24,7 +24,9 @@ const Footer = () => {
                     <p className='footer__card__description'>
                         Zapraszamy do skorzystania z najwyższej jakości usług stomatologicznych z zakresu leczenia zachowawczego (w tym leczenia kanałowego), protetyki i stomatologii kosmetycznej (m.in. licówki). Rejestracja codziennie pod numerem telefonu 603-068-648.
                     </p>
-                    <Button variant='full' title='Znany lekarz' font={{ fontSize: '1.4rem' }} />
+                    <Link to={{ pathname: 'https://www.znanylekarz.pl/magdalena-chorazykiewicz/stomatolog/wroclaw' }} target='_blank'>
+                        <Button variant='full' title='Znany lekarz' font={{ fontSize: '1.4rem' }} />
+                    </Link>
                 </div>
                 <div className='footer__lists-container'>
                     <div className='footer__lists-container__menu'>

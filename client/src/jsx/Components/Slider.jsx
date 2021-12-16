@@ -65,7 +65,7 @@ const Slider = () => {
                         <div className='slider__text'>
                             <h1 className='slider__text__title'>{slides[1].title}</h1>
                             <p className='slider__text__description'>{slides[1].description}</p>
-                            <Link to='/'>
+                            <Link to={{ pathname: 'https://www.znanylekarz.pl/magdalena-chorazykiewicz/stomatolog/wroclaw' }} target='_blank'>
                                 <Button variant='border-white' title={slides[1].button} />
                             </Link>
                         </div>
