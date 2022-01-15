@@ -1,6 +1,6 @@
-<h1 align="center">Stomatolog Klecina</h1>
+<h1>Stomatolog Klecina</h1>
 
-<p align="center">Static dental website</p>
+<p>Static dental website</p>
 
 ## Links
 
@@ -8,7 +8,7 @@
 
 ## Screenshots
 
-![Home Page](//client/src/assets/images/readme.png "Home Page")
+![Home Page](/client/src/assets/images/readme.png "Home Page")
 
 ## Built With
 
