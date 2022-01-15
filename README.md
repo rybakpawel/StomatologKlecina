@@ -10,7 +10,7 @@
 
 ![Home Page](/client/src/assets/images/readme.png "Home Page")
 
-## Built With
+## Built with
 
 - React.js
 - React Router
@@ -29,6 +29,6 @@
 **Paweł Rybak**
 
 - [Profile](https://github.com/rybakpawel "Paweł Rybak")
-- [Email](mailto:rybakpawel92@gmail.com "Hi!")
+- [E-mail](mailto:rybakpawel92@gmail.com "Hi!")
 
 
