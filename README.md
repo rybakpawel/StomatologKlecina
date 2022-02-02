@@ -12,14 +12,14 @@
 
 ## Built with
 
-- React.js
+- React
 - React Router
 - React Device Detect
 - SCSS
 - BEM
 - Swiper
 - Flaticon
-- Express.js
+- Express
 - Mongoose
 
 ## Author
