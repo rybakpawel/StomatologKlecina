@@ -20,9 +20,7 @@
 - Swiper
 - Flaticon
 - Express.js
-- Nodemon
 - Mongoose
-- Dotenv
 
 ## Author
 
